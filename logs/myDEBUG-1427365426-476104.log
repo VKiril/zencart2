@@ -1,0 +1,47 @@
+[26-Mar-2015 11:23:47 Europe/Paris] PHP Warning:  Invalid argument supplied for foreach() in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 366
+[26-Mar-2015 11:23:47 Europe/Paris] PHP Stack trace:
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   2. Feed->dispatch($request = *uninitialized*) K:\wamp\www\zencart\feed.php:16
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   3. FeedDispatcher->dispatch($request = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   4. FeedDispatcher->getFeed($args = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   5. FeedConnector->getFeed($queryParameters = *uninitialized*, $fieldMap = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   6. FeedConfig->getProductsAttr() K:\wamp\www\zencart\feed\plugin\zen_modules.php:118
+[26-Mar-2015 11:23:47 Europe/Paris] PHP Warning:  array_keys() expects parameter 1 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 1712
+[26-Mar-2015 11:23:47 Europe/Paris] PHP Stack trace:
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   2. Feed->dispatch($request = *uninitialized*) K:\wamp\www\zencart\feed.php:16
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   3. FeedDispatcher->dispatch($request = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   4. FeedDispatcher->getFeed($args = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   5. FeedConnector->getFeed($queryParameters = *uninitialized*, $fieldMap = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations($csv_file = *uninitialized*, $product = *uninitialized*, $attributes = *uninitialized*, $fieldMap = *uninitialized*, $shopConfig = *uninitialized*, $queryParameters = *uninitialized*) K:\wamp\www\zencart\feed\plugin\zen_modules.php:122
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   7. FeedConfig->allCombinations($arrays = *uninitialized*) K:\wamp\www\zencart\feed\config\FeedConfig.php:1742
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   8. array_keys(*uninitialized*) K:\wamp\www\zencart\feed\config\FeedConfig.php:1712
+[26-Mar-2015 11:23:47 Europe/Paris] PHP Warning:  array_values() expects parameter 1 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 1713
+[26-Mar-2015 11:23:47 Europe/Paris] PHP Stack trace:
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   2. Feed->dispatch($request = *uninitialized*) K:\wamp\www\zencart\feed.php:16
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   3. FeedDispatcher->dispatch($request = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   4. FeedDispatcher->getFeed($args = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   5. FeedConnector->getFeed($queryParameters = *uninitialized*, $fieldMap = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations($csv_file = *uninitialized*, $product = *uninitialized*, $attributes = *uninitialized*, $fieldMap = *uninitialized*, $shopConfig = *uninitialized*, $queryParameters = *uninitialized*) K:\wamp\www\zencart\feed\plugin\zen_modules.php:122
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   7. FeedConfig->allCombinations($arrays = *uninitialized*) K:\wamp\www\zencart\feed\config\FeedConfig.php:1742
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   8. array_values(*uninitialized*) K:\wamp\www\zencart\feed\config\FeedConfig.php:1713
+[26-Mar-2015 11:23:47 Europe/Paris] PHP Warning:  Invalid argument supplied for foreach() in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 1716
+[26-Mar-2015 11:23:47 Europe/Paris] PHP Stack trace:
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   2. Feed->dispatch($request = *uninitialized*) K:\wamp\www\zencart\feed.php:16
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   3. FeedDispatcher->dispatch($request = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   4. FeedDispatcher->getFeed($args = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   5. FeedConnector->getFeed($queryParameters = *uninitialized*, $fieldMap = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations($csv_file = *uninitialized*, $product = *uninitialized*, $attributes = *uninitialized*, $fieldMap = *uninitialized*, $shopConfig = *uninitialized*, $queryParameters = *uninitialized*) K:\wamp\www\zencart\feed\plugin\zen_modules.php:122
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   7. FeedConfig->allCombinations($arrays = *uninitialized*) K:\wamp\www\zencart\feed\config\FeedConfig.php:1742
+[26-Mar-2015 11:23:47 Europe/Paris] PHP Warning:  Invalid argument supplied for foreach() in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 2216
+[26-Mar-2015 11:23:47 Europe/Paris] PHP Stack trace:
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   2. Feed->dispatch($request = *uninitialized*) K:\wamp\www\zencart\feed.php:16
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   3. FeedDispatcher->dispatch($request = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   4. FeedDispatcher->getFeed($args = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   5. FeedConnector->getFeed($queryParameters = *uninitialized*, $fieldMap = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations($csv_file = *uninitialized*, $product = *uninitialized*, $attributes = *uninitialized*, $fieldMap = *uninitialized*, $shopConfig = *uninitialized*, $queryParameters = *uninitialized*) K:\wamp\www\zencart\feed\plugin\zen_modules.php:122
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   7. FeedConfig->getRowElements($field = *uninitialized*, $attributes = *uninitialized*, $product = *uninitialized*, $combinations = *uninitialized*, $shopConfig = *uninitialized*, $queryParameters = *uninitialized*) K:\wamp\www\zencart\feed\config\FeedConfig.php:1756
+[26-Mar-2015 11:23:47 Europe/Paris] PHP   8. FeedConfig->getProductVariants($attributes = *uninitialized*, $product = *uninitialized*, $combinations = *uninitialized*) K:\wamp\www\zencart\feed\config\FeedConfig.php:1883
