@@ -310,8 +310,7 @@ class FeedConfig {
                     pd.language_id as language_id,
                     pd.products_description as products_description,
                     pd.products_url as products_url,
-                    p.products_tax_class_id as tax_class_id,
-                    p.products_status as availability
+                    p.products_status as products_status
 
         ';
         $from = ' FROM
@@ -1003,6 +1002,7 @@ class FeedConfig {
         foreach ($result1 as $key=>$value) {
             $temp[$value['products_options_id']] = $value ;
         }
+        //var_dump($temp);die;
         $this->product_options  = $temp;
 
         $select_options_attributes = '
@@ -2091,96 +2091,162 @@ class FeedConfig {
                 return $result ;
             }//
             case 'Shipping'              : {
-                if(isset($this->feedData['FEED_FIELD_SHIPPING_COST'])){
+                /*if(isset($this->feedData['FEED_FIELD_SHIPPING_COST'])){
                     return $this->feedData['FEED_FIELD_SHIPPING_COST'] ;
                 }
-                return '' ;
+                return '' ;*/
+                if($this->feedData['FEED_FIELD_SHIPPING_COST_1'] != 'N' and is_string($this->feedData['FEED_FIELD_SHIPPING_COST_1'])){
+                    $temp = explode(';',$this->feedData['FEED_FIELD_SHIPPING_COST_1']);
+                    $temp = $temp[1] ;
+                    if($product[$temp]){
+                        return  $product[$temp] ;
+                    }
+                } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_2'] != 'N' ){
+
+                }
+                return '';
             }//
+
+
+
+
+
+
+
+
+
+
+
+
             case 'ShippingAddition'      : {
-                if(isset($this->feedData['FEED_SHIPPING_ADDITION_1']) != 'N'){
-                    return $this->feedData['FEED_SHIPPING_ADDITION_1'];
-                } elseif(isset($this->feedData['FEED_SHIPPING_ADDITION_2'])){
-                    return $this->feedData['FEED_SHIPPING_ADDITION_2'];
+                if($this->feedData['FEED_SHIPPING_ADDITION_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_ADDITION_1'])){
+                    $temp = explode(';',$this->feedData['FEED_SHIPPING_ADDITION_1']);
+                    $temp = $temp[1] ;
+                    if($product[$temp]){
+                        return  $product[$temp] ;
+                    } elseif ($this->feedData['FEED_SHIPPING_ADDITION_2'] ){
+                        return $this->feedData['FEED_SHIPPING_ADDITION_2'];
+                    }
                 }
                 return '';
             }///
             case 'shipping_paypal_ost'   : {
-                if(isset($this->feedData['FEED_SHIPPING_PAYPAL_OST_1']) != 'N'){
-                    return $this->feedData['FEED_SHIPPING_PAYPAL_OST_1'];
-                } elseif (isset($this->feedData['FEED_SHIPPING_PAYPAL_OST_2'])){
-                    return $this->feedData['FEED_SHIPPING_PAYPAL_OST_2'];
+                if($this->feedData['FEED_SHIPPING_PAYPAL_OST_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_PAYPAL_OST_1'])){
+                    $temp = explode(';',$this->feedData['FEED_SHIPPING_PAYPAL_OST_1']);
+                    $temp = $temp[1] ;
+                    if($product[$temp]){
+                        return  $product[$temp] ;
+                    } elseif ($this->feedData['FEED_SHIPPING_PAYPAL_OST_2'] ){
+                        return $this->feedData['FEED_SHIPPING_PAYPAL_OST_2'];
+                    }
                 }
                 return '';
             }///
             case 'shipping_cod'          : {
-                if(isset($this->feedData['FEED_SHIPPING_COD_1']) != 'N'){
-                    return $this->feedData['FEED_SHIPPING_COD_1'];
-                } elseif (isset($this->feedData['FEED_SHIPPING_COD_2'])){
-                    return $this->feedData['FEED_SHIPPING_COD_2'];
+                if($this->feedData['FEED_SHIPPING_COD_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_COD_1'])){
+                    $temp = explode(';',$this->feedData['FEED_SHIPPING_COD_1']);
+                    $temp = $temp[1] ;
+                    if($product[$temp]){
+                        return  $product[$temp] ;
+                    } elseif ($this->feedData['FEED_SHIPPING_COD_2'] ){
+                        return $this->feedData['FEED_SHIPPING_COD_2'];
+                    }
                 }
                 return '';
             }///
             case 'shipping_credit'       : {
-                if(isset($this->feedData['FEED_SHIPPING_CREDIT_1']) != 'N'){
-                    return $this->feedData['FEED_SHIPPING_CREDIT_1'];
-                } elseif (isset($this->feedData['FEED_SHIPPING_CREDIT_2'])){
-                    return $this->feedData['FEED_SHIPPING_CREDIT_2'];
+                if($this->feedData['FEED_SHIPPING_CREDIT_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_CREDIT_1'])){
+                    $temp = explode(';',$this->feedData['FEED_SHIPPING_CREDIT_1']);
+                    $temp = $temp[1] ;
+                    if($product[$temp]){
+                        return  $product[$temp] ;
+                    } elseif ($this->feedData['FEED_SHIPPING_CREDIT_2'] ){
+                        return $this->feedData['FEED_SHIPPING_CREDIT_2'];
+                    }
                 }
                 return '';
             }///
             case 'shipping_paypal'       : {
-                if(isset($this->feedData['FEED_SHIPPING_PAYPAL_1']) != 'N'){
-                    return $this->feedData['FEED_SHIPPING_PAYPAL_1'];
-                } elseif (isset($this->feedData['FEED_SHIPPING_PAYPAL_2'])){
-                    return $this->feedData['FEED_SHIPPING_PAYPAL_2'];
+                if($this->feedData['FEED_SHIPPING_PAYPAL_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_PAYPAL_1'])){
+                    $temp = explode(';',$this->feedData['FEED_SHIPPING_PAYPAL_1']);
+                    $temp = $temp[1] ;
+                    if($product[$temp]){
+                        return  $product[$temp] ;
+                    } elseif ($this->feedData['FEED_SHIPPING_PAYPAL_2'] ){
+                        return $this->feedData['FEED_SHIPPING_PAYPAL_2'];
+                    }
                 }
                 return '';
             }///
             case 'shipping_transfer'     : {
-                if(isset($this->feedData['FEED_SHIPPING_TRANSFER_1']) != 'N'){
-                    return $this->feedData['FEED_SHIPPING_TRANSFER_1'];
-                } elseif (isset($this->feedData['FEED_SHIPPING_TRANSFER_2'])){
-                    return $this->feedData['FEED_SHIPPING_TRANSFER_2'];
+                if($this->feedData['FEED_SHIPPING_TRANSFER_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_TRANSFER_1'])){
+                    $temp = explode(';',$this->feedData['FEED_SHIPPING_TRANSFER_1']);
+                    $temp = $temp[1] ;
+                    if($product[$temp]){
+                        return  $product[$temp] ;
+                    } elseif ($this->feedData['FEED_SHIPPING_TRANSFER_2'] ){
+                        return $this->feedData['FEED_SHIPPING_TRANSFER_2'];
+                    }
                 }
                 return '';
             }///
             case 'shipping_debit'        : {
-                if(isset($this->feedData['FEED_SHIPPING_DEBIT_1']) != 'N'){
-                    return $this->feedData['FEED_SHIPPING_DEBIT_1'];
-                } elseif ($this->feedData['FEED_SHIPPING_DEBIT_2']){
-                    return $this->feedData['FEED_SHIPPING_DEBIT_2'];
+                if($this->feedData['FEED_SHIPPING_DEBIT_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_DEBIT_1'])){
+                    $temp = explode(';',$this->feedData['FEED_SHIPPING_DEBIT_1']);
+                    $temp = $temp[1] ;
+                    if($product[$temp]){
+                        return  $product[$temp] ;
+                    } elseif ($this->feedData['FEED_SHIPPING_DEBIT_2'] ){
+                        return $this->feedData['FEED_SHIPPING_DEBIT_2'];
+                    }
                 }
                 return '';
             }///
             case 'shipping_account'      : {
-                if(isset($this->feedData['FEED_SHIPPING_ACCOUNT_1']) != 'N'){
-                    return $this->feedData['FEED_SHIPPING_ACCOUNT_1'];
-                } elseif (isset($this->feedData['FEED_SHIPPING_ACCOUNT_2'])){
-                    return $this->feedData['FEED_SHIPPING_ACCOUNT_2'];
+                if($this->feedData['FEED_SHIPPING_ACCOUNT_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_ACCOUNT_1'])){
+                    $temp = explode(';',$this->feedData['FEED_SHIPPING_ACCOUNT_1']);
+                    $temp = $temp[1] ;
+                    if($product[$temp]){
+                        return  $product[$temp] ;
+                    } elseif ($this->feedData['FEED_SHIPPING_ACCOUNT_2'] ){
+                        return $this->feedData['FEED_SHIPPING_ACCOUNT_2'];
+                    }
                 }
                 return '';
             }///
             case 'shipping_moneybookers' : {
-                if(isset($this->feedData['FEED_SHIPPING_MONEYBOOKERS_1'])!= 'N'){
-                    return $this->feedData['FEED_SHIPPING_MONEYBOOKERS_1'];
-                } elseif (isset($this->feedData['FEED_SHIPPING_MONEYBOOKERS_2'])){
-                    return $this->feedData['FEED_SHIPPING_MONEYBOOKERS_2'];
+                if($this->feedData['FEED_SHIPPING_MONEYBOOKERS_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_MONEYBOOKERS_1'])){
+                    $temp = explode(';',$this->feedData['FEED_SHIPPING_MONEYBOOKERS_1']);
+                    $temp = $temp[1] ;
+                    if($product[$temp]){
+                        return  $product[$temp] ;
+                    } elseif ($this->feedData['FEED_SHIPPING_MONEYBOOKERS_2'] ){
+                        return $this->feedData['FEED_SHIPPING_MONEYBOOKERS_2'];
+                    }
                 }
                 return '';
             }///
             case 'shipping_giropay'      : {
-                if(isset($this->feedData['FEED_SHIPPING_GIROPAY_1']) != 'N'){
-                    return $this->feedData['FEED_SHIPPING_GIROPAY_1'];
-                } elseif (isset($this->feedData['FEED_SHIPPING_GIROPAY_2'])){
-                    return $this->feedData['FEED_SHIPPING_GIROPAY_2'];
+                if($this->feedData['FEED_SHIPPING_GIROPAY_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_GIROPAY_1'])){
+                    $temp = explode(';',$this->feedData['FEED_SHIPPING_GIROPAY_1']);
+                    $temp = $temp[1] ;
+                    if($product[$temp]){
+                        return  $product[$temp] ;
+                    } elseif ($this->feedData['FEED_SHIPPING_GIROPAY_2'] ){
+                        return $this->feedData['FEED_SHIPPING_GIROPAY_2'];
+                    }
                 }
                 return '';
             }///
             case 'shipping_click_buy'    : {
-                if(isset($this->feedData['FEED_SHIPPING_CLICK_BUY_1']) !='N'){
-                    return $this->feedData['FEED_SHIPPING_CLICK_BUY_1'];
-                } elseif (isset($this->feedData['FEED_SHIPPING_CLICK_BUY_2'])){
-                    return $this->feedData['FEED_SHIPPING_CLICK_BUY_2'];
+                if($this->feedData['FEED_SHIPPING_CLICK_BUY_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_CLICK_BUY_1'])){
+                    $temp = explode(';',$this->feedData['FEED_SHIPPING_CLICK_BUY_1']);
+                    $temp = $temp[1] ;
+                    if($product[$temp]){
+                        return  $product[$temp] ;
+                    } elseif ($this->feedData['FEED_SHIPPING_CLICK_BUY_2'] ){
+                        return $this->feedData['FEED_SHIPPING_CLICK_BUY_2'];
+                    }
                 }
                 return '';
             }///
