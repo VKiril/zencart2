@@ -1,0 +1,19 @@
+[30-Mar-2015 11:02:13 Europe/Paris] PHP Warning:  Illegal offset type in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 2103
+[30-Mar-2015 11:02:13 Europe/Paris] PHP Stack trace:
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1786
+[30-Mar-2015 11:02:13 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 2103
+[30-Mar-2015 11:02:13 Europe/Paris] PHP Stack trace:
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1786
+[30-Mar-2015 11:02:13 Europe/Paris] PHP   8. array_key_exists() K:\wamp\www\zencart\feed\config\FeedConfig.php:2103

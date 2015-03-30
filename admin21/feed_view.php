@@ -520,6 +520,46 @@ if(isset($_POST['FEED_USER']) && isset($_POST['FEED_PASS']) && isset($_POST['FEE
         </td>
     </tr>
 
+
+    <tr>
+        <td>• Base Price Field:</td>
+        <td>
+            <select name="FEED_FIELD_BASE_PRICE_1"  style="width: 130px; margin-left: 2px">
+                <option value="N" <?php if ($feedifyConfig->getConfig('FEED_FIELD_BASE_PRICE_1') == 'N') echo "selected"; ?> >-- empty --</option>
+                <?php
+                foreach($dbProductsColumns as $key=>$column) {
+                    echo '<option value='.$column['table_name'].';'.$column['column_name'];
+                    if ($feedifyConfig->getConfig('FEED_FIELD_BASE_PRICE_1') == $column['table_name'].';'.$column['column_name']) {
+                        echo " selected ";
+                    }
+                    echo'>'.$column['column_name'].' ('.$column['table_name'].')</option>';
+                }
+                ?>
+            </select>
+        </td>
+        <td >
+            or
+            <select name="FEED_FIELD_BASE_PRICE_2"  style="width: 130px; margin-left: 2px" >
+                <option value="N" <?php if ($feedifyConfig->getConfig('FEED_FIELD_BASE_PRICE_2') == 'N') echo "selected"; ?> >-- empty --</option>
+                <?php
+                foreach($attributes as $attribute) {
+                    echo '<option value='.$attribute['products_options_id'];
+                    if ($feedifyConfig->getConfig('FEED_FIELD_BASE_PRICE_2') == $attribute['products_options_id']) {
+                        echo " selected ";
+                    }
+                    echo'>'.$attribute['products_options_name'].'</option>';
+                }
+                ?>
+            </select>
+        </td>
+        <td>
+            or
+            <input type="text" name="FEED_FIELD_BASE_PRICE_3" style="margin-left: 2px; width: 130px;" value="<?php echo $feedifyConfig->getConfig('FEED_FIELD_BASE_PRICE_3');?>"/>
+        </td>
+    </tr>
+
+
+
     <tr>
         <td>• Manufacturer recommended price:</td>
         <td>
