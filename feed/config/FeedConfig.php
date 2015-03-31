@@ -234,7 +234,7 @@ class FeedConfig {
         return $stdConfig;
     }
 
-	public function getShopAvailabilityConfig()
+	/*public function getShopAvailabilityConfig()
 	{
 		$oConfig = new stdClass();
 		$aAvailabilities[] = array('id' => '1', 'title' => 'No export inactive and with quantity = 0 products');
@@ -251,7 +251,7 @@ class FeedConfig {
 		}
 
 		return $oConfig;
-	}
+	}*/
 
 	public function getShopCurrencyConfig()
 	{
@@ -269,7 +269,7 @@ class FeedConfig {
 		return $oConfig;
 	}
 
-	public function getQueryFields()
+	/*public function getQueryFields()
 	{
 		return array(
 			'id' => 'id',
@@ -292,7 +292,7 @@ class FeedConfig {
 			'currencies_value' => 'currencies_value',
 			'special_price' => 'special_price',
 		);
-	}
+	}*/
 
     public function getProducts($limit, $offset, $queryParameters){
         $db = $GLOBALS['db'];
@@ -369,7 +369,7 @@ class FeedConfig {
 
     public function getProductsAttr(){
         $db = $GLOBALS['db'];
-        $query  = '
+        /*$query  = '
                     select
                         pa.products_attributes_id as products_attributes_id,
                         pa.products_id as products_id,
@@ -382,7 +382,16 @@ class FeedConfig {
                     from '.TABLE_PRODUCTS_ATTRIBUTES.' pa
                     where pa.products_id in ('.$this->productsId.')
 
+        ';*/
+
+        $query  = '
+                    select
+                        *
+                    from '.TABLE_PRODUCTS_ATTRIBUTES.' pa
+                    where pa.products_id in ('.$this->productsId.')
+
         ';
+
         $response = $this->dataFetch($db->Execute($query), true);
 
         $lastProductId = null;
@@ -445,7 +454,7 @@ class FeedConfig {
      * @return object
      */
     //return data for one or more products, or data from order by Id
-    public function getProductsResource($queryParameters = null, $offset = 0, $limit = 0, $id = array()){
+    /*public function getProductsResource($queryParameters = null, $offset = 0, $limit = 0, $id = array()){
         $db = $GLOBALS['db'];
 
 		// integrating fields if they was selected by user
@@ -536,16 +545,16 @@ class FeedConfig {
         if ( $offset ) { $t_query .= " OFFSET ".$offset; }
 
         return $this->dataFetch($db->Execute($t_query), true);
-    }
+    }*/
 
-    public function getAttributes()
+    /*public function getAttributes()
     {
         $attributes = array();
 
         return array_merge($attributes, $this->_getAllAttributesCombo());
-    }
+    }*/
 
-    protected function _getAllAttributesCombo()
+    /*protected function _getAllAttributesCombo()
     {
         $results = array();
         foreach($this->productAttributes as $product_id => $attributes) {
@@ -566,10 +575,10 @@ class FeedConfig {
         }
 
         return $results;
-    }
+    }*/
 
 
-	protected function _addToQuery()
+	/*protected function _addToQuery()
 	{
 		$query = array();
 
@@ -588,10 +597,10 @@ class FeedConfig {
 		}
 
 		return $query;
-	}
+	}*/
 
 	//function for checking if column products_id exist in tables $table
-	protected function _checkTables($tables)
+	/*protected function _checkTables($tables)
 	{
 		$db = $GLOBALS['db'];
 		$output = array();
@@ -627,9 +636,9 @@ class FeedConfig {
 				}
 			}
 		}
-	}
+	}*/
 
-    public function generate($index, $attributes, $options, $product_id)
+    /*public function generate($index, $attributes, $options, $product_id)
     {
         $attributes[$this->productAttributes[$product_id][$index]['products_attributes_id']] = $this->productAttributes[$product_id][$index]['products_attributes_id'];
         $options[$this->productAttributes[$product_id][$index]['options_id']] = $this->productAttributes[$product_id][$index]['options_id'];
@@ -645,10 +654,10 @@ class FeedConfig {
         }
 
         return $combinations;
-    }
+    }*/
 
 
-    public function getProductsAttributes($ids = array(), $products_ids = array())
+    /*public function getProductsAttributes($ids = array(), $products_ids = array())
     {
         $db = $GLOBALS['db'];
         $query = "
@@ -697,7 +706,7 @@ class FeedConfig {
             }
         }
 
-    }
+    }*/
 
 	//get and analyze the shipping parameters and set priority of fields
 	public function getFeedifyShippingParameters()
@@ -1169,14 +1178,14 @@ class FeedConfig {
 	 */
 	public function iniParameters()
 	{
-		$this->_getAttributesParameters();
+		/*$this->_getAttributesParameters();*/
 		$this->defaultPAvailability = $this->getConfig('FEED_FIELD_AVAILABILITY');
 		$this->defaultSCost = $this->getConfig('FEED_FIELD_SHIPPING_COST');
 		$this->defaultTRate = $this->getConfig('FEED_FIELD_TAX_RATE');
 		$this->storePickup  = $this->getConfig('MODULE_SHIPPING_STOREPICKUP_COST');
 		$this->taxZone      = $this->_getTaxZone();
 		$this->perItemCost  = $this->getConfig('MODULE_SHIPPING_ITEM_COST');
-		$this->deliveryTime = $this->_getDeliveryTime();
+		/*$this->deliveryTime = $this->_getDeliveryTime();*/
 		$this->shipping     = $this->_initShipping();
 		foreach( $this->shipping->modules as $key=>$module){
 			$GLOBALS[substr($module, 0, strrpos($module, '.'))]->enabled = true;
@@ -1189,7 +1198,7 @@ class FeedConfig {
 	 * or print it if
 	 * @param $feed is false
 	 */
-	protected function _attributesFeedOrPrint($oArticle, $row, $csv_file, $feed = true)
+	/*protected function _attributesFeedOrPrint($oArticle, $row, $csv_file, $feed = true)
 	{
 		$attributes = array();
 
@@ -1300,9 +1309,9 @@ class FeedConfig {
 				unset($oArticle['attributes_combo'][$key]);
 			}
 		}
-	}
+	}*/
 
-	protected function _getAttributesParameters()
+	/*protected function _getAttributesParameters()
 	{
 		$this->attToFeed['Color']    = $this->getConfig("FEED_ATTRIBUTES_COLOR");
 		$this->attToFeed['Size']     = $this->getConfig("FEED_ATTRIBUTES_SIZE");
@@ -1312,7 +1321,7 @@ class FeedConfig {
 		$this->attToFeed = array_merge($this->attToFeed, $this->shippingAttributes);
 		$this->attToFeed['enable_qty_0']     = $this->getConfig("FEED_PQTY_ZERO");
 		$this->attToFeed['enable_pstatus_0'] = $this->getConfig("FEED_PSTATUS_ZERO");
-	}
+	}*/
 
 	protected function _getTaxZone()
 	{
@@ -1335,14 +1344,14 @@ class FeedConfig {
 		return $taxZone;
 	}
 
-	protected function _getDeliveryTime()
+	/*protected function _getDeliveryTime()
 	{
 		$return = $this->getConfig('FEED_DTIME_FROM').'_'
 			.$this->getConfig('FEED_DTIME_TO').'_'
 			.$this->getConfig('FEED_DTIME_TYPE');
 
 		return $return;
-	}
+	}*/
 
 	protected function _initShipping()
 	{
@@ -1354,7 +1363,7 @@ class FeedConfig {
 		return $this->shipping;
 	}
 
-	protected function _getFeedColumnValue($field, $oArticle, $Lang = null)
+	/*protected function _getFeedColumnValue($field, $oArticle, $Lang = null)
 	{
 
 		switch($field) {
@@ -1542,9 +1551,9 @@ class FeedConfig {
 					return '';
 				} break;
 		}
-	}
+	}*/
 
-	protected function _getCondition($oArticle)
+	/*protected function _getCondition($oArticle)
 	{
 		if($oArticle['FEED_EFIELD_CONDITON_2']) {
 
@@ -1553,9 +1562,9 @@ class FeedConfig {
 
 			return $this->extraAttributes['Condition']['query'];
 		}
-	}
+	}*/
 
-	protected function _getAvailability($oArticle)
+	/*protected function _getAvailability($oArticle)
 	{
 		if($this->defaultPAvailability != 'N') {
 
@@ -1564,7 +1573,7 @@ class FeedConfig {
 
 			return $oArticle['status'];
 		}
-	}
+	}*/
 
 	//key - shipping type name ex: "SHIPPING_PAYPAL_OST"
 	protected function _setShipping($oArticle, $key)
@@ -1586,7 +1595,7 @@ class FeedConfig {
 	 * @param $productImage
 	 * @return string
 	 */
-	protected function _getImage($productImage)
+	/*protected function _getImage($productImage)
 	{
 		return 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['SCRIPT_NAME'])."/images/".$productImage;
 	}
@@ -1594,9 +1603,9 @@ class FeedConfig {
 	protected function _getLink($productsId)
 	{
 		return 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['SCRIPT_NAME']).'/index.php?main_page=product_info&products_id='.strtok($productsId,'_');
-	}
+	}*/
 
-	protected function _checkShippingPrice($row)
+	/*protected function _checkShippingPrice($row)
 	{
 		$check = $this->_getDeliveryCost($row);
 
@@ -1608,9 +1617,9 @@ class FeedConfig {
 
 			return $price;
 		}
-	}
+	}*/
 
-	protected function _getDeliveryCost( $row )
+	/*protected function _getDeliveryCost( $row )
 	{
 		if($row['always_free_shipping'] == '1') { return 0; }
 
@@ -1636,7 +1645,7 @@ class FeedConfig {
 		$total_weight = $temp;
 
 		return $price;
-	}
+	}*/
 
 	protected function _addToCartContent($row){
 		if( !$_SESSION['cart']) {
@@ -1672,7 +1681,7 @@ class FeedConfig {
 		return $price;
 	}
 
-	protected function _getSpecialPrice($row)
+	/*protected function _getSpecialPrice($row)
 	{
 		$product_special = $row['special_price'];
 		if ( $product_special > 0 ) {
@@ -1683,18 +1692,18 @@ class FeedConfig {
 
 			return 0;
 		}
-	}
+	}*/
 
-	protected function _getBrutPrice($row)
+	/*protected function _getBrutPrice($row)
 	{
 		if(!$row['is_attribute']) {
 			$row['price'] = $this->price;
 		}
 
 		return round(($row['price'])*$row['currencies_value'], $row['currencies_decimal_places']);
-	}
+	}*/
 
-	protected function _getCategory($productID,$langID)
+	/*protected function _getCategory($productID,$langID)
 	{
 
 		$db = $GLOBALS['db'];
@@ -1703,9 +1712,9 @@ class FeedConfig {
 		$category = $db->Execute($sql);
 
 		return $this->_buildCategory($category->fields['categories_id'],$langID);
-	}
+	}*/
 
-	protected function _buildCategory($categoryId,$langID)
+	/*protected function _buildCategory($categoryId,$langID)
 	{
 		$db = $GLOBALS['db'];
 		if (isset($this->categoryPath[$categoryId])) {
@@ -1730,9 +1739,9 @@ class FeedConfig {
 
 			return $this->categoryPath[$tmpID];
 		}
-	}
+	}*/
 
-	protected function _getParent($catID)
+	/*protected function _getParent($catID)
 	{
 		$db = $GLOBALS['db'];
 		$sql = "SELECT parent_id FROM " . TABLE_CATEGORIES . "
@@ -1745,7 +1754,7 @@ class FeedConfig {
 
 			return $parent_query->fields['parent_id'];
 		}
-	}
+	}*/
 
 
     function allCombinations($arrays)
@@ -1817,10 +1826,12 @@ class FeedConfig {
                 return $product['products_description'];
             }
             case 'AdditionalInfo'        : {
-                return $product['products_url'];
+                return 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['SCRIPT_NAME']).
+                '/index.php?main_page=product_info&products_id='.$product['products_id'];
             }
             case 'Image'                 : {
-                return 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['SCRIPT_NAME'])."/images/".$product['products_image'];
+                return 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['SCRIPT_NAME']).
+                "/images/".$product['products_image'];
             }
             case 'Manufacturer'          : {
                 return $this->manufactures[$product['manufacturers_id']];
