@@ -1,0 +1,50 @@
+[31-Mar-2015 09:26:22 Europe/Paris] PHP Warning:  array_keys() expects parameter 1 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 1750
+[31-Mar-2015 09:26:22 Europe/Paris] PHP Stack trace:
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   7. FeedConfig->allCombinations() K:\wamp\www\zencart\feed\config\FeedConfig.php:1780
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   8. array_keys() K:\wamp\www\zencart\feed\config\FeedConfig.php:1750
+[31-Mar-2015 09:26:22 Europe/Paris] PHP Warning:  array_values() expects parameter 1 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 1751
+[31-Mar-2015 09:26:22 Europe/Paris] PHP Stack trace:
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   7. FeedConfig->allCombinations() K:\wamp\www\zencart\feed\config\FeedConfig.php:1780
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   8. array_values() K:\wamp\www\zencart\feed\config\FeedConfig.php:1751
+[31-Mar-2015 09:26:22 Europe/Paris] PHP Warning:  Invalid argument supplied for foreach() in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 1754
+[31-Mar-2015 09:26:22 Europe/Paris] PHP Stack trace:
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   7. FeedConfig->allCombinations() K:\wamp\www\zencart\feed\config\FeedConfig.php:1780
+[31-Mar-2015 09:26:22 Europe/Paris] PHP Warning:  Invalid argument supplied for foreach() in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 2747
+[31-Mar-2015 09:26:22 Europe/Paris] PHP Stack trace:
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1794
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   8. FeedConfig->getProductVariants() K:\wamp\www\zencart\feed\config\FeedConfig.php:1861
+[31-Mar-2015 09:26:22 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 2250
+[31-Mar-2015 09:26:22 Europe/Paris] PHP Stack trace:
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1794
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   8. FeedConfig->getGender() K:\wamp\www\zencart\feed\config\FeedConfig.php:1882
+[31-Mar-2015 09:26:22 Europe/Paris] PHP   9. array_key_exists() K:\wamp\www\zencart\feed\config\FeedConfig.php:2250

@@ -296,7 +296,7 @@ class FeedConfig {
 
     public function getProducts($limit, $offset, $queryParameters){
         $db = $GLOBALS['db'];
-        $select = '
+        /*$select = '
                 SELECT
                     p.products_id as products_id,
                     p.products_quantity as products_quantity,
@@ -312,6 +312,10 @@ class FeedConfig {
                     pd.products_url as products_url,
                     p.products_status as products_status
 
+        ';*/
+        $select  = '
+                SELECT
+                    *
         ';
         $from = ' FROM
                     '.TABLE_PRODUCTS.' p
@@ -321,8 +325,9 @@ class FeedConfig {
         $where = '';
 
         /*
-        0 => 'out of stock',
-        1 => 'in stock'      */
+            0 => 'out of stock',
+            1 => 'in stock'
+         */
         if($queryParameters->status ) {
             switch ($queryParameters->status) {
 
@@ -356,9 +361,8 @@ class FeedConfig {
             $temp[] = $item['products_id'];
         }
         $this->productsId = implode(',',$temp);
-
         $this->getSpecialPrices();
-
+        //var_dump($response);die;
         return  $response;
     }
 
@@ -1786,546 +1790,579 @@ class FeedConfig {
                     $row[$key] = $this->getRowElements($field, $attributes, $product, $combinations, $shopConfig,$queryParameters);
 
                 }
-                var_dump($row);die;
-                fputcsv($csv_file, $row , ';', '"');
+                var_dump($row);
+                //fputcsv($csv_file, $row , ';', '"');
             }
         } else {
             foreach($fieldMap as $key => $field) {
                 $row[$key] = $this->getRowElements($field, null, $product, null, $shopConfig, $queryParameters);
             }
-            //var_dump($row);die;
-            fputcsv($csv_file, $row, ';', '"');
+            var_dump($row);
+            //fputcsv($csv_file, $row, ';', '"');
+        }
+    }
+
+    public function getRowElements($field, $attributes=null, $product, $combinations = null , $shopConfig, $queryParameters ){
+        switch($field){
+            case 'ModelOwn'              : {
+                return $this->getModelOwn($product,$combinations);
+            }
+            case 'Name'                  : {
+                return $product['products_name'];
+            }
+            case 'Subtitle'              : {
+                return $this->getSubtitle($product,$combinations,$attributes);
+            }
+            case 'Description'           : {
+                return $product['products_description'];
+            }
+            case 'AdditionalInfo'        : {
+                return $product['products_url'];
+            }
+            case 'Image'                 : {
+                return 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['SCRIPT_NAME'])."/images/".$product['products_image'];
+            }
+            case 'Manufacturer'          : {
+                return $this->manufactures[$product['manufacturers_id']];
+            }
+            case 'Model'                 : {
+                return $product['products_model'];
+            }
+            case 'Category'              : {
+                return $this->getCategory($product);
+            }
+            case 'CategoriesGoogle'      : {
+                return $this->getCategoriesGoogle($product,$combinations,$attributes);
+            }
+            case 'CategoriesYatego'      : {
+                return $this->getCategoriesYatego($product,$combinations,$attributes);
+            }
+            case 'ProductsEAN'           : {
+                return $this->getProductsEAN($product,$combinations,$attributes);
+            }
+            case 'ProductsISBN'          : {
+                return $this->getProductsISBN($product,$combinations,$attributes);
+            }
+            case 'Productsprice_brut'    : {
+                return $this->getProductsPriceBrut($product,$combinations,$attributes);
+            }
+            case 'Productspecial'        : {
+                return $this->getProductSpecial($product);
+            }
+            case 'Productsprice_uvp'     : {
+                return $this->getProductsPriceUVP($product,$combinations,$attributes);
+            }
+            case 'BasePrice'             : {
+                return $this->getBasePrice($product,$combinations,$attributes);
+            }
+            case 'BaseUnit'              : {
+                return $this->getBaseUnit($product,$combinations,$attributes);
+            }
+            case 'Productstax'           : {
+                return $this->getProductTax($product);
+            }
+            case 'ProductsVariant'       : {
+                return $this->getProductVariants($attributes,$product,$combinations);
+            }
+            case 'Currency'              : {
+                return $queryParameters->currency ?: 'USD';
+            }
+            case 'Quantity'              : {
+                return $product['products_quantity'];
+            }
+            case 'Weight'                : {
+                return $this->getWeight($product,$combinations,$attributes);
+            }
+            case 'AvailabilityTxt'       : {
+                return $this->getAvailability($product);
+            }
+            case 'Condition'             : {
+                return $this->getCondition();
+            }
+            case 'Coupon'                : {
+                return $this->getCoupon($product,$combinations,$attributes);
+            }
+            case 'Gender'                : {
+                return $this->getGender($product,$combinations,$attributes);
+            }
+            case 'Size'                  : {
+               return $this->getSize($product,$combinations,$attributes);
+            }
+            case 'Color'                 : {
+                return $this->getColor($product,$combinations,$attributes);
+            }
+            case 'Material'              : {
+                return $this->getMaterial($product,$combinations,$attributes);
+            }
+            case 'Packet_size'           : {
+               return $this->getPacketSize($product,$combinations,$attributes);
+            }
+            case 'DeliveryTime'          : {
+               return $this->getDeliveryTime($product,$combinations,$attributes);
+            }
+            case 'Shipping'              : {
+                return $this->getShipping($product,$combinations,$attributes);
+            }
+            case 'ShippingAddition'      : {
+                return $this->getShippingAddition($product);
+            }
+            case 'shipping_paypal_ost'   : {
+                return $this->getShippingPaypalCost($product);
+            }
+            case 'shipping_cod'          : {
+                return $this->getShippingCode($product);
+            }
+            case 'shipping_credit'       : {
+                return $this->getShippingCredit($product);
+            }
+            case 'shipping_paypal'       : {
+                return $this->getShippingPaypal($product);
+            }
+            case 'shipping_transfer'     : {
+                return $this->getShippingTransfer($product);
+            }
+            case 'shipping_debit'        : {
+                return $this->getShippingDebit($product);
+            }
+            case 'shipping_account'      : {
+                return $this->getShippingAccount($product);
+            }
+            case 'shipping_moneybookers' : {
+                return $this->getShippingMoneybookers($product);
+            }
+            case 'shipping_giropay'      : {
+                return $this->getShippingGiropay($product);
+            }
+            case 'shipping_click_buy'    : {
+                return $this->getShippingClickBy($product);
+            }
+            case 'shipping_comment'      : {
+                return $this->getShippingComment();
+            }
         }
     }
 
 
-
-    public function getRowElements($field, $attributes=null, $product, $combinations = null , $shopConfig, $queryParameters ){
-        //var_dump($this->feedData);die;
-        switch($field){
-            case 'ModelOwn'              : {
-                return $this->getModelOwn($product,$combinations);
-            }//
-            case 'Name'                  : {
-                return $product['products_name'];
-            }//
-            case 'Subtitle'              : {
-                if($this->feedData['FEED_FIELD_SUBTITLE_1'] != 'N' and is_string($this->feedData['FEED_FIELD_SUBTITLE_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_SUBTITLE_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_FIELD_SUBTITLE_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_SUBTITLE_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_SUBTITLE_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_FIELD_SUBTITLE_3'] != '' ){
-                            return $this->feedData['FEED_FIELD_SUBTITLE_3'] ;
-                        }
-                    }
+    public function getSubtitle($product,$combinations,$attributes){
+        if($this->feedData['FEED_FIELD_SUBTITLE_1'] != 'N' and is_string($this->feedData['FEED_FIELD_SUBTITLE_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_SUBTITLE_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_FIELD_SUBTITLE_2'] != 'N' ){
+                if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_COLOR_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_SUBTITLE_2']]['products_options_id']]] ;
+                }  elseif ( $this->feedData['FEED_FIELD_SUBTITLE_3'] != '' ){
+                    return $this->feedData['FEED_FIELD_SUBTITLE_3'] ;
                 }
+            }
+        }
 
-                return '';
-            }//
-            case 'Description'           : {
-                return $product['products_description'];
-            }//
-            case 'AdditionalInfo'        : {
-                return $product['products_url'];
-            }//
-            case 'Image'                 : {
-                return 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['SCRIPT_NAME'])."/images/".$product['products_image'];
-            }//
-            case 'Manufacturer'          : {
-                return $this->manufactures[$product['manufacturers_id']];
-            }//
-            case 'Model'                 : {
-                return $product['products_model'];
-            }//
-            case 'Category'              : {
-                return $this->getCategory($product);
-            }//
-            case 'CategoriesGoogle'      : {
-                if($this->feedData['FEED_FIELD_GOOGLE_1'] != 'N' and is_string($this->feedData['FEED_FIELD_GOOGLE_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_GOOGLE_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_FIELD_GOOGLE_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_FIELD_GOOGLE_3'] != '' ){
-                            return $this->feedData['FEED_FIELD_GOOGLE_3'] ;
-                        }
-                    }  elseif ( $this->feedData['FEED_FIELD_GOOGLE_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_GOOGLE_3'] ;
-                    }
-                } elseif ($this->feedData['FEED_FIELD_GOOGLE_2'] != 'N' ){
-                    if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                        return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id']]] ;
-                    }  elseif ( $this->feedData['FEED_FIELD_GOOGLE_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_GOOGLE_3'] ;
-                    }
+        return '';
+    }
+
+    public function getCategoriesGoogle($product,$combinations,$attributes) {
+        if($this->feedData['FEED_FIELD_GOOGLE_1'] != 'N' and is_string($this->feedData['FEED_FIELD_GOOGLE_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_GOOGLE_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_FIELD_GOOGLE_2'] != 'N' ){
+                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id']]] ;
                 }  elseif ( $this->feedData['FEED_FIELD_GOOGLE_3'] != '' ){
                     return $this->feedData['FEED_FIELD_GOOGLE_3'] ;
                 }
+            }  elseif ( $this->feedData['FEED_FIELD_GOOGLE_3'] != '' ){
+                return $this->feedData['FEED_FIELD_GOOGLE_3'] ;
+            }
+        } elseif ($this->feedData['FEED_FIELD_GOOGLE_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id']]] ;
+            }  elseif ( $this->feedData['FEED_FIELD_GOOGLE_3'] != '' ){
+                return $this->feedData['FEED_FIELD_GOOGLE_3'] ;
+            }
+        }  elseif ( $this->feedData['FEED_FIELD_GOOGLE_3'] != '' ){
+            return $this->feedData['FEED_FIELD_GOOGLE_3'] ;
+        }
 
-                return '';
-            }//
-            case 'CategoriesYatego'      : {
-                if($this->feedData['FEED_FIELD_YATEGOO_1'] != 'N' and is_string($this->feedData['FEED_FIELD_YATEGOO_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_YATEGOO_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_FIELD_YATEGOO_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_FIELD_YATEGOO_3'] != '' ){
-                            return $this->feedData['FEED_FIELD_YATEGOO_3'] ;
-                        }
-                    } elseif ( $this->feedData['FEED_FIELD_YATEGOO_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_YATEGOO_3'] ;
-                    }
-                } elseif ($this->feedData['FEED_FIELD_YATEGOO_2'] != 'N' ){
-                    if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                        return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id']]] ;
-                    }  elseif ( $this->feedData['FEED_FIELD_YATEGOO_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_YATEGOO_3'] ;
-                    }
-                } elseif ( $this->feedData['FEED_FIELD_YATEGOO_3'] != '' ){
+        return '';
+    }
+
+    public function getCategoriesYatego($product,$combinations,$attributes){
+        if($this->feedData['FEED_FIELD_YATEGOO_1'] != 'N' and is_string($this->feedData['FEED_FIELD_YATEGOO_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_YATEGOO_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_FIELD_YATEGOO_2'] != 'N' ){
+                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id']]] ;
+                }  elseif ( $this->feedData['FEED_FIELD_YATEGOO_3'] != '' ){
                     return $this->feedData['FEED_FIELD_YATEGOO_3'] ;
                 }
+            } elseif ( $this->feedData['FEED_FIELD_YATEGOO_3'] != '' ){
+                return $this->feedData['FEED_FIELD_YATEGOO_3'] ;
+            }
+        } elseif ($this->feedData['FEED_FIELD_YATEGOO_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id']]] ;
+            }  elseif ( $this->feedData['FEED_FIELD_YATEGOO_3'] != '' ){
+                return $this->feedData['FEED_FIELD_YATEGOO_3'] ;
+            }
+        } elseif ( $this->feedData['FEED_FIELD_YATEGOO_3'] != '' ){
+            return $this->feedData['FEED_FIELD_YATEGOO_3'] ;
+        }
 
-                return '';
-            }//
-            case 'ProductsEAN'           : {
-                /*if($this->feedData['FEED_FIELD_EAN_1'] != 'N'){
-                    return $this->feedData['FEED_FIELD_EAN_1'];
-                } elseif ($this->feedData['FEED_FIELD_EAN_2'] != 'N'){
-                    return $this->feedData['FEED_FIELD_EAN_2'];
-                } elseif(isset($this->feedData['FEED_FIELD_EAN_3'])){
-                    return $this->feedData['FEED_FIELD_EAN_3'];
-                }
-                return '';*/
-                if($this->feedData['FEED_FIELD_EAN_1'] != 'N' and is_string($this->feedData['FEED_FIELD_EAN_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_EAN_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_FIELD_EAN_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_FIELD_EAN_3'] != '' ){
-                            return $this->feedData['FEED_FIELD_EAN_3'] ;
-                        }
-                    } elseif ( $this->feedData['FEED_FIELD_EAN_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_EAN_3'] ;
-                    }
-                } elseif ($this->feedData['FEED_FIELD_EAN_2'] != 'N' ){
-                    if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                        return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id']]] ;
-                    }  elseif ( $this->feedData['FEED_FIELD_EAN_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_EAN_3'] ;
-                    }
-                } elseif ( $this->feedData['FEED_FIELD_EAN_3'] != '' ){
+        return '';
+    }
+
+    public function getProductsEAN($product,$combinations,$attributes){
+        if($this->feedData['FEED_FIELD_EAN_1'] != 'N' and is_string($this->feedData['FEED_FIELD_EAN_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_EAN_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_FIELD_EAN_2'] != 'N' ){
+                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id']]] ;
+                }  elseif ( $this->feedData['FEED_FIELD_EAN_3'] != '' ){
                     return $this->feedData['FEED_FIELD_EAN_3'] ;
                 }
+            } elseif ( $this->feedData['FEED_FIELD_EAN_3'] != '' ){
+                return $this->feedData['FEED_FIELD_EAN_3'] ;
+            }
+        } elseif ($this->feedData['FEED_FIELD_EAN_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id']]] ;
+            }  elseif ( $this->feedData['FEED_FIELD_EAN_3'] != '' ){
+                return $this->feedData['FEED_FIELD_EAN_3'] ;
+            }
+        } elseif ( $this->feedData['FEED_FIELD_EAN_3'] != '' ){
+            return $this->feedData['FEED_FIELD_EAN_3'] ;
+        }
 
-                return '';
+        return '';
+    }
 
-            }//
-            case 'ProductsISBN'          : {
-                /*if($this->feedData['FEED_FIELD_ISBN_1'] != 'N'){
-                    return $this->feedData['FEED_FIELD_ISBN_1'];
-                } elseif ($this->feedData['FEED_FIELD_ISBN_2'] != 'N'){
-                    return $this->feedData['FEED_FIELD_ISBN_2'];
-                } elseif (isset($this->feedData['FEED_FIELD_ISBN_3'])){
-                    return $this->feedData['FEED_FIELD_ISBN_3'];
-                }
-                return '';*/
-                if($this->feedData['FEED_FIELD_ISBN_1'] != 'N' and is_string($this->feedData['FEED_FIELD_ISBN_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_ISBN_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_FIELD_ISBN_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_FIELD_ISBN_3'] != '' ){
-                            return $this->feedData['FEED_FIELD_ISBN_3'] ;
-                        }
-                    } elseif ( $this->feedData['FEED_FIELD_ISBN_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_ISBN_3'] ;
-                    }
-                } elseif ($this->feedData['FEED_FIELD_ISBN_2'] != 'N' ){
-                    if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                        return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id']]] ;
-                    }  elseif ( $this->feedData['FEED_FIELD_ISBN_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_ISBN_3'] ;
-                    }
-                } elseif ( $this->feedData['FEED_FIELD_ISBN_3'] != '' ){
+    public function getProductsISBN($product,$combinations,$attributes){
+        if($this->feedData['FEED_FIELD_ISBN_1'] != 'N' and is_string($this->feedData['FEED_FIELD_ISBN_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_ISBN_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_FIELD_ISBN_2'] != 'N' ){
+                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id']]] ;
+                }  elseif ( $this->feedData['FEED_FIELD_ISBN_3'] != '' ){
                     return $this->feedData['FEED_FIELD_ISBN_3'] ;
                 }
+            } elseif ( $this->feedData['FEED_FIELD_ISBN_3'] != '' ){
+                return $this->feedData['FEED_FIELD_ISBN_3'] ;
+            }
+        } elseif ($this->feedData['FEED_FIELD_ISBN_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id']]] ;
+            }  elseif ( $this->feedData['FEED_FIELD_ISBN_3'] != '' ){
+                return $this->feedData['FEED_FIELD_ISBN_3'] ;
+            }
+        } elseif ( $this->feedData['FEED_FIELD_ISBN_3'] != '' ){
+            return $this->feedData['FEED_FIELD_ISBN_3'] ;
+        }
 
-                return '';
+        return '';
+    }
 
-            }//
-            case 'Productsprice_brut'    : {
-                if($attributes[$product['products_id']]){
-                    foreach ($combinations as $combination) {
-                        $a = $attributes[$product['products_id']]['options_values_price'][$combination];
-                        $b = $attributes[$product['products_id']]['price_prefix'][$combination];
-                        $c = $product['products_price'];
-                        $expression = $b.$a.$c;
-                        eval( '$result += (' . $expression . ');' );
+    public function getProductsPriceBrut($product,$combinations,$attributes){
+        if($attributes[$product['products_id']]){
+            foreach ($combinations as $combination) {
+                $a = $attributes[$product['products_id']]['options_values_price'][$combination];
+                $b = $attributes[$product['products_id']]['price_prefix'][$combination];
+                $c = $product['products_price'];
+                $expression = $b.$a.$c;
+                eval( '$result += (' . $expression . ');' );
 
-                        return ((($result)*$this->getProductTax($product)) / 100) + (+$result);
-                    }
-                }
+                return ((($result)*$this->getProductTax($product)) / 100) + (+$result);
+            }
+        }
 
-                return ((($product['products_price'])*$this->getProductTax($product)) / 100) + ($product['products_price']);
-            }//
-            case 'Productspecial'        : {
-                if($this->specialPrice[$product['products_id']]){
-                    $today = date("Y-m-d");
-                    $expireDate = $this->specialPrice['expires_date'];
-                    if($today < $expireDate) {
-                        return $this->specialPrice['specials_new_products_price'];
-                    }
-                }
+        return ((($product['products_price'])*$this->getProductTax($product)) / 100) + ($product['products_price']);
+    }
 
-                return '';
-            }//
-            case 'Productsprice_uvp'     : {
-                if($this->feedData['FEED_FIELD_UVP_1'] != 'N' and is_string($this->feedData['FEED_FIELD_UVP_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_UVP_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_FIELD_UVP_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_FIELD_UVP_3'] != '' ){
-                            return $this->feedData['FEED_FIELD_UVP_3'] ;
-                        }
-                    } elseif ( $this->feedData['FEED_FIELD_UVP_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_UVP_3'] ;
-                    }
-                } elseif ($this->feedData['FEED_FIELD_UVP_2'] != 'N' ){
-                    if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                        return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id']]] ;
-                    }  elseif ( $this->feedData['FEED_FIELD_UVP_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_UVP_3'] ;
-                    }
-                } elseif ( $this->feedData['FEED_FIELD_UVP_3'] != '' ){
+    public function getProductSpecial($product){
+        if($this->specialPrice[$product['products_id']]){
+            $today = date("Y-m-d");
+            $expireDate = $this->specialPrice['expires_date'];
+            if($today < $expireDate) {
+                return $this->specialPrice['specials_new_products_price'];
+            }
+        }
+
+        return '';
+    }
+
+    public function getProductsPriceUVP($product,$combinations,$attributes){
+        if($this->feedData['FEED_FIELD_UVP_1'] != 'N' and is_string($this->feedData['FEED_FIELD_UVP_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_UVP_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_FIELD_UVP_2'] != 'N' ){
+                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id']]] ;
+                }  elseif ( $this->feedData['FEED_FIELD_UVP_3'] != '' ){
                     return $this->feedData['FEED_FIELD_UVP_3'] ;
                 }
-
-                return '';
+            } elseif ( $this->feedData['FEED_FIELD_UVP_3'] != '' ){
+                return $this->feedData['FEED_FIELD_UVP_3'] ;
             }
-            case 'BasePrice'             : {
-                if($this->feedData['FEED_FIELD_BASE_PRICE_1'] != 'N' and is_string($this->feedData['FEED_FIELD_BASE_PRICE_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_BASE_PRICE_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_FIELD_BASE_PRICE_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_FIELD_BASE_PRICE_3'] != '' ){
-                            return $this->feedData['FEED_FIELD_BASE_PRICE_3'] ;
-                        }
-                    } elseif ( $this->feedData['FEED_FIELD_BASE_PRICE_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_BASE_PRICE_3'] ;
-                    }
-                } elseif ($this->feedData['FEED_FIELD_BASE_PRICE_2'] != 'N' ){
-                    if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                        return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id']]] ;
-                    }  elseif ( $this->feedData['FEED_FIELD_BASE_PRICE_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_BASE_PRICE_3'] ;
-                    }
-                } elseif ( $this->feedData['FEED_FIELD_BASE_PRICE_3'] != '' ){
+        } elseif ($this->feedData['FEED_FIELD_UVP_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id']]] ;
+            }  elseif ( $this->feedData['FEED_FIELD_UVP_3'] != '' ){
+                return $this->feedData['FEED_FIELD_UVP_3'] ;
+            }
+        } elseif ( $this->feedData['FEED_FIELD_UVP_3'] != '' ){
+            return $this->feedData['FEED_FIELD_UVP_3'] ;
+        }
+
+        return '';
+    }
+
+    public function getBasePrice($product,$combinations,$attributes){
+        if($this->feedData['FEED_FIELD_BASE_PRICE_1'] != 'N' and is_string($this->feedData['FEED_FIELD_BASE_PRICE_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_BASE_PRICE_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_FIELD_BASE_PRICE_2'] != 'N' ){
+                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id']]] ;
+                }  elseif ( $this->feedData['FEED_FIELD_BASE_PRICE_3'] != '' ){
                     return $this->feedData['FEED_FIELD_BASE_PRICE_3'] ;
                 }
+            } elseif ( $this->feedData['FEED_FIELD_BASE_PRICE_3'] != '' ){
+                return $this->feedData['FEED_FIELD_BASE_PRICE_3'] ;
+            }
+        } elseif ($this->feedData['FEED_FIELD_BASE_PRICE_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id']]] ;
+            }  elseif ( $this->feedData['FEED_FIELD_BASE_PRICE_3'] != '' ){
+                return $this->feedData['FEED_FIELD_BASE_PRICE_3'] ;
+            }
+        } elseif ( $this->feedData['FEED_FIELD_BASE_PRICE_3'] != '' ){
+            return $this->feedData['FEED_FIELD_BASE_PRICE_3'] ;
+        }
 
-                return '';
-            }//
-            case 'BaseUnit'              : {
-                if($this->feedData['FEED_FIELD_BASE_UNIT_1'] != 'N' and is_string($this->feedData['FEED_FIELD_BASE_UNIT_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_BASE_UNIT_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_FIELD_BASE_UNIT_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_FIELD_BASE_UNIT_3'] != '' ){
-                            return $this->feedData['FEED_FIELD_BASE_UNIT_3'] ;
-                        }
-                    } elseif ( $this->feedData['FEED_FIELD_BASE_UNIT_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_BASE_UNIT_3'] ;
-                    }
-                } elseif ($this->feedData['FEED_FIELD_BASE_UNIT_2'] != 'N' ){
-                    if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                        return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id']]] ;
-                    }  elseif ( $this->feedData['FEED_FIELD_BASE_UNIT_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_BASE_UNIT_3'] ;
-                    }
-                } elseif ( $this->feedData['FEED_FIELD_BASE_UNIT_3'] != '' ){
+        return '';
+    }
+
+    public function getBaseUnit($product,$combinations,$attributes){
+        if($this->feedData['FEED_FIELD_BASE_UNIT_1'] != 'N' and is_string($this->feedData['FEED_FIELD_BASE_UNIT_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_BASE_UNIT_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_FIELD_BASE_UNIT_2'] != 'N' ){
+                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id']]] ;
+                }  elseif ( $this->feedData['FEED_FIELD_BASE_UNIT_3'] != '' ){
                     return $this->feedData['FEED_FIELD_BASE_UNIT_3'] ;
                 }
-
-                return '';
+            } elseif ( $this->feedData['FEED_FIELD_BASE_UNIT_3'] != '' ){
+                return $this->feedData['FEED_FIELD_BASE_UNIT_3'] ;
             }
-            case 'Productstax'           : {
-                return $this->getProductTax($product);
-            }//
-            case 'ProductsVariant'       : {
-                return $this->getProductVariants($attributes,$product,$combinations);
-            }//
-            case 'Currency'              : {
-                return $queryParameters->currency ?: 'USD';
-            }//
-            case 'Quantity'              : {
-                return $product['products_quantity'];
-            }//
-            case 'Weight'                : {
-                if($attributes[$product['products_id']]){
-                    foreach ($combinations as $combination) {
-                        $a = $attributes[$product['products_id']]['attributes_weight'][$combination];
-                        $b = $attributes[$product['products_id']]['attributes_weight_prefix'][$combination];
-                        $c = $product['products_weight'];
-                        $expression = $b.$a.$c;
-                        eval( '$result += (' . $expression . ');' );
-                        return $result  ;
-                    }
-                }
-                return $product['products_weight'];
+        } elseif ($this->feedData['FEED_FIELD_BASE_UNIT_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id']]] ;
+            }  elseif ( $this->feedData['FEED_FIELD_BASE_UNIT_3'] != '' ){
+                return $this->feedData['FEED_FIELD_BASE_UNIT_3'] ;
+            }
+        } elseif ( $this->feedData['FEED_FIELD_BASE_UNIT_3'] != '' ){
+            return $this->feedData['FEED_FIELD_BASE_UNIT_3'] ;
+        }
 
-            }//
-            case 'AvailabilityTxt'       : {
+        return '';
+    }
 
-                if ($product['availability'] == 0) {
-                    return 2;
-                } else {
-                    return 1;
-                }
-            }//
-            case 'Condition'             : {
-                if($this->feedData['FEED_FIELD_CONDITION_1'] != 'N'){
-                    return $this->feedData['FEED_FIELD_CONDITION_1'];
-                } elseif ($this->feedData['FEED_FIELD_CONDITION_2'] != '') {
-                    return $this->feedData['FEED_FIELD_CONDITION_2'];
-                }
-                return '';
-            }//
-            case 'Coupon'                : {
-                if($this->feedData['FEED_FIELD_COUPON_1'] != 'N' and is_string($this->feedData['FEED_FIELD_COUPON_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_COUPON_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_FIELD_COUPON_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
-                            return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
-                        }
-                    } elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
-                        return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
-                    }
-                } elseif ($this->feedData['FEED_FIELD_COUPON_2'] != 'N' ){
-                    if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                        return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id']]] ;
-                    }  elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
-                        return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
-                    }
-                } elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
+    public function getWeight($product,$combinations,$attributes){
+        if($attributes[$product['products_id']]){
+            foreach ($combinations as $combination) {
+                $a = $attributes[$product['products_id']]['attributes_weight'][$combination];
+                $b = $attributes[$product['products_id']]['attributes_weight_prefix'][$combination];
+                $c = $product['products_weight'];
+                $expression = $b.$a.$c;
+                eval( '$result += (' . $expression . ');' );
+                return $result  ;
+            }
+        }
+        return $product['products_weight'];
+    }
+
+    public function getAvailability($product){
+        if ($product['availability'] == 0) {
+            return 2;
+        } else {
+            return 1;
+        }
+    }
+
+    public function getCondition(){
+        if($this->feedData['FEED_FIELD_CONDITION_1'] != 'N'){
+            return $this->feedData['FEED_FIELD_CONDITION_1'];
+        } elseif ($this->feedData['FEED_FIELD_CONDITION_2'] != '') {
+            return $this->feedData['FEED_FIELD_CONDITION_2'];
+        }
+        return '';
+    }
+
+    public function getCoupon($product,$combinations,$attributes){
+        if($this->feedData['FEED_FIELD_COUPON_1'] != 'N' and is_string($this->feedData['FEED_FIELD_COUPON_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_COUPON_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_FIELD_COUPON_2'] != 'N' ){
+                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id']]] ;
+                }  elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
                     return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
                 }
+            } elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
+                return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
+            }
+        } elseif ($this->feedData['FEED_FIELD_COUPON_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id']]] ;
+            }  elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
+                return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
+            }
+        } elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
+            return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
+        }
 
-                return '';
-            }//
-            case 'Gender'                : {
-                if($this->feedData['FEED_FIELD_GENDER_1'] != 'N' and is_string($this->feedData['FEED_FIELD_GENDER_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_GENDER_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_ATTRIBUTES_GENDER_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
-                            return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
-                        }
-                    } elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
-                        return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
-                    }
-                } elseif ($this->feedData['FEED_ATTRIBUTES_GENDER_2'] != 'N' ){
-                    if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                        return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id']]] ;
-                    }  elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
-                        return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
-                    }
-                } elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
+        return '';
+    }
+
+    public function getGender($product,$combinations,$attributes){
+        if($this->feedData['FEED_FIELD_GENDER_1'] != 'N' and is_string($this->feedData['FEED_FIELD_GENDER_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_GENDER_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_ATTRIBUTES_GENDER_2'] != 'N' ){
+                if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id']]] ;
+                }  elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
                     return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
                 }
+            } elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
+                return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
+            }
+        } elseif ($this->feedData['FEED_ATTRIBUTES_GENDER_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id']]] ;
+            }  elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
+                return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
+            }
+        } elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
+            return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
+        }
 
-                return '';
-            }//
-            case 'Size'                  : {
-                /*if($attributes){
-                    foreach ($attributes[$product['products_id']]['options_list'] as $key=>$value) {
-                        if($this->feedData['FEED_FIELD_SIZE'] != 'N'){
-                            if(strtolower($this->product_options[$key]['products_options_name']) == strtolower($this->feedData['FEED_FIELD_SIZE']) ){
-                                return $this->product_option_values[$combinations[$key]];
-                            }
-                        }
-                         elseif (isset($this->feedData['FEED_ATTRIBUTES_SIZE'])){
-                            if(strtolower($this->product_options[$key]['products_options_name']) == strtolower($this->feedData['FEED_ATTRIBUTES_SIZE']) ){
-                                return $this->product_option_values[$combinations[$key]];
-                            }
-                        } elseif (isset($this->feedData['FEED_ATTRIBUTES_SIZE_TEXTAREA'])){
-                            if(strtolower($this->product_options[$key]['products_options_name']) == strtolower($this->feedData['FEED_ATTRIBUTES_SIZE_TEXTAREA']) ){
-                                return $this->feedData['FEED_ATTRIBUTES_SIZE_TEXTAREA'];
-                            }
-                        }
-                    }
+        return '';
+    }
+
+    public function getSize($product,$combinations,$attributes){
+        if($this->feedData['FEED_FIELD_SIZE_1'] != 'N' and is_string($this->feedData['FEED_FIELD_SIZE_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_SIZE_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_ATTRIBUTES_SIZE_2'] != 'N' ){
+                if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_SIZE_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_SIZE_2']]['products_options_id']]] ;
+                }  elseif ( $this->feedData['FEED_ATTRIBUTES_SIZE_3'] != '' ){
+
+                    return $this->feedData['FEED_ATTRIBUTES_SIZE_3'] ;
                 }
-                return '';*/
-                if($this->feedData['FEED_FIELD_SIZE_1'] != 'N' and is_string($this->feedData['FEED_FIELD_SIZE_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_SIZE_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
+            }
+        }
 
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_ATTRIBUTES_SIZE_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_SIZE_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
+        return '';
+    }
 
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_SIZE_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_ATTRIBUTES_SIZE_3'] != '' ){
+    public function getColor($product,$combinations,$attributes){
 
-                            return $this->feedData['FEED_ATTRIBUTES_SIZE_3'] ;
-                        }
-                    }
+        if($this->feedData['FEED_FIELD_COLOR_1'] != 'N' and is_string($this->feedData['FEED_FIELD_COLOR_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_COLOR_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_ATTRIBUTES_COLOR_2'] != 'N' ){
+                //var_dump( $attributes[$product['products_id']]['options_list']);die;
+                if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_COLOR_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_COLOR_2']]['products_options_id']]] ;
+                }  elseif ( $this->feedData['FEED_ATTRIBUTES_COLOR_3'] != '' ){
+
+                    return $this->feedData['FEED_ATTRIBUTES_COLOR_3'] ;
                 }
+            }
+        }
 
-                return '';
+        return '';
+    }
 
-            }//
-            case 'Color'                 : {
-                /*if($attributes){
-                    foreach ($attributes[$product['products_id']]['options_list'] as $key=>$value) {
-                        if($this->feedData['FEED_FIELD_COLOR'] != 'N'){
-                            if(strtolower($this->product_options[$key]['products_options_name']) == strtolower($this->feedData['FEED_FIELD_COLOR']) ){
-                                return $this->product_option_values[$combinations[$key]];
-                            }
-                        }
-                        elseif (isset($this->feedData['FEED_ATTRIBUTES_COLOR'])){
-                            if(strtolower($this->product_options[$key]['products_options_name']) == strtolower($this->feedData['FEED_ATTRIBUTES_COLOR']) ){
-                                return $this->product_option_values[$combinations[$key]];
-                            }
-                        } elseif (isset($this->feedData['FEED_ATTRIBUTES_COLOR_TEXTAREA'])){
-                            if(strtolower($this->product_options[$key]['products_options_name']) == strtolower($this->feedData['FEED_ATTRIBUTES_COLOR_TEXTAREA']) ){
-                                return $this->feedData['FEED_ATTRIBUTES_COLOR_TEXTAREA'];
-                            }
-                        }
-                    }
-                }
-                return '';*/
-                if($this->feedData['FEED_FIELD_COLOR_1'] != 'N' and is_string($this->feedData['FEED_FIELD_COLOR_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_COLOR_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
+    public function getMaterial($product,$combinations,$attributes){
+        if($this->feedData['FEED_FIELD_MATERIAL_1'] != 'N' and is_string($this->feedData['FEED_FIELD_MATERIAL_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_MATERIAL_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
 
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_ATTRIBUTES_COLOR_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_COLOR_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ){
+                if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
 
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_COLOR_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_ATTRIBUTES_COLOR_3'] != '' ){
-
-                            return $this->feedData['FEED_ATTRIBUTES_COLOR_3'] ;
-                        }
-                    }
-                }
-
-                return '';
-            }//
-            case 'Material'              : {
-                if($this->feedData['FEED_FIELD_MATERIAL_1'] != 'N' and is_string($this->feedData['FEED_FIELD_MATERIAL_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_MATERIAL_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] != '' ){
-
-                            return $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] ;
-                        }
-                    } elseif ( $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] != '' ){
-
-                        return $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] ;
-                    }
-                } elseif ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ){
-                    if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-
-                        return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]] ;
-                    }  elseif ( $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] != '' ){
-
-                        return $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] ;
-                    }
-                } elseif ( $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] != '' ){
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]] ;
+                }  elseif ( $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] != '' ){
 
                     return $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] ;
                 }
+            } elseif ( $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] != '' ){
 
-                return '';
-            }//
-            case 'Packet_size'           : {
-                if($this->feedData['FEED_FIELD_MATERIAL_1'] != 'N' and is_string($this->feedData['FEED_FIELD_MATERIAL_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_MATERIAL_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
+                return $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] ;
+            }
+        } elseif ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
 
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]] ;
+            }  elseif ( $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] != '' ){
 
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]] ;
-                        }  elseif( $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'] !='' and
-                            $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH']  !='' and
-                            $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] !='' ){
+                return $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] ;
+            }
+        } elseif ( $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] != '' ){
 
-                            return $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'].'x'.
-                            $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH'] . 'x'.
-                            $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] . ' cm';
-                        }
-                    } elseif( $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'] !='' and
-                        $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH']  !='' and
-                        $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] !='' ){
+            return $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] ;
+        }
 
-                        return $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'].'x'.
-                        $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH'] . 'x'.
-                        $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] . ' cm';
-                    }
-                } elseif ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ){
-                    if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
+        return '';
+    }
 
-                        return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]] ;
-                    }  elseif( $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'] !='' and
-                        $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH']  !='' and
-                        $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] !='' ){
+    public function getPacketSize($product,$combinations,$attributes){
+        if($this->feedData['FEED_FIELD_MATERIAL_1'] != 'N' and is_string($this->feedData['FEED_FIELD_MATERIAL_1'])){
+            $temp = explode(';',$this->feedData['FEED_FIELD_MATERIAL_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
 
-                        return $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'].'x'.
-                        $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH'] . 'x'.
-                        $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] . ' cm';
-                    }
-                } elseif( $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'] !='' and
+                return  $product[$temp] ;
+            }elseif ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ){
+                if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]] ;
+                }  elseif( $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'] !='' and
                     $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH']  !='' and
                     $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] !='' ){
 
@@ -2333,322 +2370,277 @@ class FeedConfig {
                     $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH'] . 'x'.
                     $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] . ' cm';
                 }
+            } elseif( $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'] !='' and
+                $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH']  !='' and
+                $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] !='' ){
 
-                return '';
+                return $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'].'x'.
+                $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH'] . 'x'.
+                $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] . ' cm';
+            }
+        } elseif ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
 
-            }//
-            case 'DeliveryTime'          : {
-                if($this->feedData['FEED_DTIME_1'] != 'N' and is_string($this->feedData['FEED_DTIME_1'])){
-                    $temp = explode(';',$this->feedData['FEED_DTIME_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    } elseif ($this->feedData['FEED_DTIME_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_DTIME_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_DTIME_2']]['products_options_id']]] ;
-                        }  else {
-                            $from = $to = $type = $result = null ;
-                            if(isset($this->feedData['FEED_DTIME_FROM'])){
-                                $from  = $this->feedData['FEED_DTIME_FROM'];
-                            }
-                            if(isset($this->feedData['FEED_DTIME_TO'])){
-                                $to = $this->feedData['FEED_DTIME_TO'];
-                            }
-                            if(isset($this->feedData['FEED_DTIME_TYPE'])){
-                                $type = $this->feedData['FEED_DTIME_TYPE'];
-                            }
-                            if($from)
-                                $result = $from.'_';
-                            if($to)
-                                $result .= $to.'_';
-                            if(($type and $to) or ($type and $from)){
-                                $result .= $type;
-                            } else {
-                                $result = '';
-                            }
-                        }
-                    } else {
-                        $from = $to = $type = $result = null ;
-                        if(isset($this->feedData['FEED_DTIME_FROM'])){
-                            $from  = $this->feedData['FEED_DTIME_FROM'];
-                        }
-                        if(isset($this->feedData['FEED_DTIME_TO'])){
-                            $to = $this->feedData['FEED_DTIME_TO'];
-                        }
-                        if(isset($this->feedData['FEED_DTIME_TYPE'])){
-                            $type = $this->feedData['FEED_DTIME_TYPE'];
-                        }
-                        if($from)
-                            $result = $from.'_';
-                        if($to)
-                            $result .= $to.'_';
-                        if(($type and $to) or ($type and $from)){
-                            $result .= $type;
-                        } else {
-                            $result = '';
-                        }
-                    }
-                } elseif ($this->feedData['FEED_DTIME_2'] != 'N' ){
-                    if( array_key_exists($this->product_options[$this->feedData['FEED_DTIME_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                        return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_DTIME_2']]['products_options_id']]] ;
-                    }  else {
-                        $from = $to = $type = $result = null ;
-                        if(isset($this->feedData['FEED_DTIME_FROM'])){
-                            $from  = $this->feedData['FEED_DTIME_FROM'];
-                        }
-                        if(isset($this->feedData['FEED_DTIME_TO'])){
-                            $to = $this->feedData['FEED_DTIME_TO'];
-                        }
-                        if(isset($this->feedData['FEED_DTIME_TYPE'])){
-                            $type = $this->feedData['FEED_DTIME_TYPE'];
-                        }
-                        if($from)
-                            $result = $from.'_';
-                        if($to)
-                            $result .= $to.'_';
-                        if(($type and $to) or ($type and $from)){
-                            $result .= $type;
-                        } else {
-                            $result = '';
-                        }
-                    }
-                } else {
-                    $from = $to = $type = $result = null ;
-                    if(isset($this->feedData['FEED_DTIME_FROM'])){
-                        $from  = $this->feedData['FEED_DTIME_FROM'];
-                    }
-                    if(isset($this->feedData['FEED_DTIME_TO'])){
-                        $to = $this->feedData['FEED_DTIME_TO'];
-                    }
-                    if(isset($this->feedData['FEED_DTIME_TYPE'])){
-                        $type = $this->feedData['FEED_DTIME_TYPE'];
-                    }
-                    if($from)
-                        $result = $from.'_';
-                    if($to)
-                        $result .= $to.'_';
-                    if(($type and $to) or ($type and $from)){
-                        $result .= $type;
-                    } else {
-                        $result = '';
-                    }
-                }
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]] ;
+            }  elseif( $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'] !='' and
+                $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH']  !='' and
+                $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] !='' ){
 
-                return '';
+                return $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'].'x'.
+                $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH'] . 'x'.
+                $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] . ' cm';
+            }
+        } elseif( $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'] !='' and
+            $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH']  !='' and
+            $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] !='' ){
 
+            return $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'].'x'.
+            $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH'] . 'x'.
+            $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] . ' cm';
+        }
 
-                $from = $to = $type = $result = null ;
-                if(isset($this->feedData['FEED_DTIME_FROM'])){
-                    $from  = $this->feedData['FEED_DTIME_FROM'];
-                }
-                if(isset($this->feedData['FEED_DTIME_TO'])){
-                    $to = $this->feedData['FEED_DTIME_TO'];
-                }
-                if(isset($this->feedData['FEED_DTIME_TYPE'])){
-                    $type = $this->feedData['FEED_DTIME_TYPE'];
-                }
-                if($from)
-                    $result = $from.'_';
-                if($to)
-                    $result .= $to.'_';
-                if(($type and $to) or ($type and $from)){
-                    $result .= $type;
-                } else {
-                    $result = '';
-                }
+        return '';
+    }
 
-                return $result ;
-            }//
-            case 'Shipping'              : {
-                if($this->feedData['FEED_FIELD_SHIPPING_COST_1'] != 'N' and is_string($this->feedData['FEED_FIELD_SHIPPING_COST_1'])){
-                    $temp = explode(';',$this->feedData['FEED_FIELD_SHIPPING_COST_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    }elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_2'] != 'N' ){
-                        if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_SHIPPING_COST_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                            return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_SHIPPING_COST_2']]['products_options_id']]] ;
-                        }  elseif ( $this->feedData['FEED_FIELD_SHIPPING_COST_3'] != '' ){
-                            return $this->feedData['FEED_FIELD_SHIPPING_COST_3'] ;
-                        }
-                    } elseif ( $this->feedData['FEED_FIELD_SHIPPING_COST_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_SHIPPING_COST_3'] ;
-                    }
-                } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_2'] != 'N' ){
-                    if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_SHIPPING_COST_2']]['products_options_id'] , $attributes[$product]['options_list'] )){
-                        return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_SHIPPING_COST_2']]['products_options_id']]] ;
-                    }  elseif ( $this->feedData['FEED_FIELD_SHIPPING_COST_3'] != '' ){
-                        return $this->feedData['FEED_FIELD_SHIPPING_COST_3'] ;
-                    }
-                } elseif ( $this->feedData['FEED_FIELD_SHIPPING_COST_3'] != '' ){
-                    return $this->feedData['FEED_FIELD_SHIPPING_COST_3'] ;
-                }
-                return '';
-            }//
-            case 'ShippingAddition'      : {
-                if($this->feedData['FEED_SHIPPING_ADDITION_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_ADDITION_1'])){
-                    $temp = explode(';',$this->feedData['FEED_SHIPPING_ADDITION_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    } elseif ($this->feedData['FEED_SHIPPING_ADDITION_2'] ){
-                        return $this->feedData['FEED_SHIPPING_ADDITION_2'];
-                    }
-                } elseif ($this->feedData['FEED_SHIPPING_ADDITION_2'] ){
-                    return $this->feedData['FEED_SHIPPING_ADDITION_2'];
-                }
-                return '';
-            }//
-            case 'shipping_paypal_ost'   : {
-                if($this->feedData['FEED_SHIPPING_PAYPAL_OST_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_PAYPAL_OST_1'])){
-                    $temp = explode(';',$this->feedData['FEED_SHIPPING_PAYPAL_OST_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    } elseif ($this->feedData['FEED_SHIPPING_PAYPAL_OST_2'] ){
-                        return $this->feedData['FEED_SHIPPING_PAYPAL_OST_2'];
-                    }
-                } elseif ($this->feedData['FEED_SHIPPING_PAYPAL_OST_2'] ){
-                    return $this->feedData['FEED_SHIPPING_PAYPAL_OST_2'];
-                }
-                return '';
-            }//
-            case 'shipping_cod'          : {
-                if($this->feedData['FEED_SHIPPING_COD_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_COD_1'])){
-                    $temp = explode(';',$this->feedData['FEED_SHIPPING_COD_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    } elseif ($this->feedData['FEED_SHIPPING_COD_2'] ){
-                        return $this->feedData['FEED_SHIPPING_COD_2'];
-                    }
-                } elseif ($this->feedData['FEED_SHIPPING_COD_2'] ){
-                    return $this->feedData['FEED_SHIPPING_COD_2'];
-                }
-                return '';
-            }//
-            case 'shipping_credit'       : {
-                if($this->feedData['FEED_SHIPPING_CREDIT_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_CREDIT_1'])){
-                    $temp = explode(';',$this->feedData['FEED_SHIPPING_CREDIT_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    } elseif ($this->feedData['FEED_SHIPPING_CREDIT_2'] ){
-                        return $this->feedData['FEED_SHIPPING_CREDIT_2'];
-                    }
-                } elseif ($this->feedData['FEED_SHIPPING_CREDIT_2'] ){
-                    return $this->feedData['FEED_SHIPPING_CREDIT_2'];
-                }
-                return '';
-            }//
-            case 'shipping_paypal'       : {
-                if($this->feedData['FEED_SHIPPING_PAYPAL_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_PAYPAL_1'])){
-                    $temp = explode(';',$this->feedData['FEED_SHIPPING_PAYPAL_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    } elseif ($this->feedData['FEED_SHIPPING_PAYPAL_2'] ){
-                        return $this->feedData['FEED_SHIPPING_PAYPAL_2'];
-                    }
-                } elseif ($this->feedData['FEED_SHIPPING_PAYPAL_2'] ){
-                    return $this->feedData['FEED_SHIPPING_PAYPAL_2'];
-                }
-                return '';
-            }//
-            case 'shipping_transfer'     : {
-                if($this->feedData['FEED_SHIPPING_TRANSFER_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_TRANSFER_1'])){
-                    $temp = explode(';',$this->feedData['FEED_SHIPPING_TRANSFER_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    } elseif ($this->feedData['FEED_SHIPPING_TRANSFER_2'] ){
-                        return $this->feedData['FEED_SHIPPING_TRANSFER_2'];
-                    }
-                } elseif ($this->feedData['FEED_SHIPPING_TRANSFER_2'] ){
-                    return $this->feedData['FEED_SHIPPING_TRANSFER_2'];
-                }
-                return '';
-            }//
-            case 'shipping_debit'        : {
-                if($this->feedData['FEED_SHIPPING_DEBIT_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_DEBIT_1'])){
-                    $temp = explode(';',$this->feedData['FEED_SHIPPING_DEBIT_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    } elseif ($this->feedData['FEED_SHIPPING_DEBIT_2'] ){
-                        return $this->feedData['FEED_SHIPPING_DEBIT_2'];
-                    }
-                } elseif ($this->feedData['FEED_SHIPPING_DEBIT_2'] ){
-                    return $this->feedData['FEED_SHIPPING_DEBIT_2'];
-                }
-                return '';
-            }//
-            case 'shipping_account'      : {
-                if($this->feedData['FEED_SHIPPING_ACCOUNT_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_ACCOUNT_1'])){
-                    $temp = explode(';',$this->feedData['FEED_SHIPPING_ACCOUNT_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    } elseif ($this->feedData['FEED_SHIPPING_ACCOUNT_2'] ){
-                        return $this->feedData['FEED_SHIPPING_ACCOUNT_2'];
-                    }
-                } elseif ($this->feedData['FEED_SHIPPING_ACCOUNT_2'] ){
-                    return $this->feedData['FEED_SHIPPING_ACCOUNT_2'];
-                }
-                return '';
-            }//
-            case 'shipping_moneybookers' : {
-                if($this->feedData['FEED_SHIPPING_MONEYBOOKERS_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_MONEYBOOKERS_1'])){
-                    $temp = explode(';',$this->feedData['FEED_SHIPPING_MONEYBOOKERS_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    } elseif ($this->feedData['FEED_SHIPPING_MONEYBOOKERS_2'] ){
-                        return $this->feedData['FEED_SHIPPING_MONEYBOOKERS_2'];
-                    }
-                } elseif ($this->feedData['FEED_SHIPPING_MONEYBOOKERS_2'] ){
-                    return $this->feedData['FEED_SHIPPING_MONEYBOOKERS_2'];
-                }
-                return '';
-            }//
-            case 'shipping_giropay'      : {
-                if($this->feedData['FEED_SHIPPING_GIROPAY_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_GIROPAY_1'])){
-                    $temp = explode(';',$this->feedData['FEED_SHIPPING_GIROPAY_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    } elseif ($this->feedData['FEED_SHIPPING_GIROPAY_2'] ){
-                        return $this->feedData['FEED_SHIPPING_GIROPAY_2'];
-                    }
-                } elseif ($this->feedData['FEED_SHIPPING_GIROPAY_2'] ){
-                    return $this->feedData['FEED_SHIPPING_GIROPAY_2'];
-                }
-                return '';
-            }//
-            case 'shipping_click_buy'    : {
-                if($this->feedData['FEED_SHIPPING_CLICK_BUY_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_CLICK_BUY_1'])){
-                    $temp = explode(';',$this->feedData['FEED_SHIPPING_CLICK_BUY_1']);
-                    $temp = $temp[1] ;
-                    if($product[$temp]){
-                        return  $product[$temp] ;
-                    } elseif ($this->feedData['FEED_SHIPPING_CLICK_BUY_2'] ){
-                        return $this->feedData['FEED_SHIPPING_CLICK_BUY_2'];
-                    }
-                } elseif ($this->feedData['FEED_SHIPPING_CLICK_BUY_2'] ){
-                    return $this->feedData['FEED_SHIPPING_CLICK_BUY_2'];
-                }
-                return '';
-            }//
-            case 'shipping_comment'      : {
-                if(isset($this->feedData['FEED_SHIPPING_COMMENT'])){
-                    return $this->feedData['FEED_SHIPPING_COMMENT'];
-                }
-                return '';
-            }//
-            default:{
-                return 1;
+    public function getDeliveryTime($product,$combinations,$attributes){
+        if($key = $this->feedData['FEED_DTIME_1'] != 'N' ){
+            $temp = explode(';',$this->feedData['FEED_DTIME_1']);
+            $temp = $temp[1] ;
+            $result = '';
+            if($product[$temp] != null){
+                return  $product[$temp] ;
             }
         }
+        if ($this->feedData['FEED_DTIME_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_DTIME_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_DTIME_2']]['products_options_id']]] ;
+            }
+        }
+
+        return $this->getInfoFromDeliveringForm() ;
+    }
+
+    public function getInfoFromDeliveringForm(){
+        $from = $to = $type = $result = null ;
+        if(isset($this->feedData['FEED_DTIME_FROM'])){
+            $from  = $this->feedData['FEED_DTIME_FROM'];
+        }
+        if(isset($this->feedData['FEED_DTIME_TO'])){
+            $to = $this->feedData['FEED_DTIME_TO'];
+        }
+        if(isset($this->feedData['FEED_DTIME_TYPE'])){
+            $type = $this->feedData['FEED_DTIME_TYPE'];
+        }
+        if($from)
+            $result = $from.'_';
+        if($to)
+            $result .= $to.'_';
+        if(($type and $to) or ($type and $from)){
+            $result .= $type;
+        } else {
+            $result = '';
+        }
+
+        return $result ;
+    }
+
+    public function getShipping($product,$combinations,$attributes){
+        if ($this->feedData['FEED_FIELD_SHIPPING_COST_1'] != 'N' and is_string($this->feedData['FEED_FIELD_SHIPPING_COST_1'])) {
+            $temp = explode(';', $this->feedData['FEED_FIELD_SHIPPING_COST_1']);
+            $temp = $temp[1];
+            if ($product[$temp]) {
+                return $product[$temp];
+            } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_2'] != 'N') {
+                if (array_key_exists($this->product_options[$this->feedData['FEED_FIELD_SHIPPING_COST_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
+                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_SHIPPING_COST_2']]['products_options_id']]];
+                } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_3'] != '') {
+                    return $this->feedData['FEED_FIELD_SHIPPING_COST_3'];
+                }
+            } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_3'] != '') {
+                return $this->feedData['FEED_FIELD_SHIPPING_COST_3'];
+            }
+        } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_2'] != 'N') {
+            if (array_key_exists($this->product_options[$this->feedData['FEED_FIELD_SHIPPING_COST_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_SHIPPING_COST_2']]['products_options_id']]];
+            } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_3'] != '') {
+                return $this->feedData['FEED_FIELD_SHIPPING_COST_3'];
+            }
+        } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_3'] != '') {
+            return $this->feedData['FEED_FIELD_SHIPPING_COST_3'];
+        }
+        return '';
+    }
+
+    public function getShippingAddition($product){
+        if($this->feedData['FEED_SHIPPING_ADDITION_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_ADDITION_1'])){
+            $temp = explode(';',$this->feedData['FEED_SHIPPING_ADDITION_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            } elseif ($this->feedData['FEED_SHIPPING_ADDITION_2'] ){
+                return $this->feedData['FEED_SHIPPING_ADDITION_2'];
+            }
+        } elseif ($this->feedData['FEED_SHIPPING_ADDITION_2'] ){
+            return $this->feedData['FEED_SHIPPING_ADDITION_2'];
+        }
+        return '';
+    }
+
+    public function getShippingPaypalCost($product){
+        if($this->feedData['FEED_SHIPPING_PAYPAL_OST_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_PAYPAL_OST_1'])){
+            $temp = explode(';',$this->feedData['FEED_SHIPPING_PAYPAL_OST_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            } elseif ($this->feedData['FEED_SHIPPING_PAYPAL_OST_2'] ){
+                return $this->feedData['FEED_SHIPPING_PAYPAL_OST_2'];
+            }
+        } elseif ($this->feedData['FEED_SHIPPING_PAYPAL_OST_2'] ){
+            return $this->feedData['FEED_SHIPPING_PAYPAL_OST_2'];
+        }
+        return '';
+    }
+
+    public function getShippingCode($product){
+        if($this->feedData['FEED_SHIPPING_COD_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_COD_1'])){
+            $temp = explode(';',$this->feedData['FEED_SHIPPING_COD_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            } elseif ($this->feedData['FEED_SHIPPING_COD_2'] ){
+                return $this->feedData['FEED_SHIPPING_COD_2'];
+            }
+        } elseif ($this->feedData['FEED_SHIPPING_COD_2'] ){
+            return $this->feedData['FEED_SHIPPING_COD_2'];
+        }
+        return '';
+    }
+
+    public function getShippingCredit($product){
+        if($this->feedData['FEED_SHIPPING_CREDIT_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_CREDIT_1'])){
+            $temp = explode(';',$this->feedData['FEED_SHIPPING_CREDIT_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            } elseif ($this->feedData['FEED_SHIPPING_CREDIT_2'] ){
+                return $this->feedData['FEED_SHIPPING_CREDIT_2'];
+            }
+        } elseif ($this->feedData['FEED_SHIPPING_CREDIT_2'] ){
+            return $this->feedData['FEED_SHIPPING_CREDIT_2'];
+        }
+        return '';
+    }
+
+    public function getShippingPaypal($product){
+        if($this->feedData['FEED_SHIPPING_PAYPAL_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_PAYPAL_1'])){
+            $temp = explode(';',$this->feedData['FEED_SHIPPING_PAYPAL_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            } elseif ($this->feedData['FEED_SHIPPING_PAYPAL_2'] ){
+                return $this->feedData['FEED_SHIPPING_PAYPAL_2'];
+            }
+        } elseif ($this->feedData['FEED_SHIPPING_PAYPAL_2'] ){
+            return $this->feedData['FEED_SHIPPING_PAYPAL_2'];
+        }
+        return '';
+    }
+
+    public function getShippingTransfer($product){
+        if($this->feedData['FEED_SHIPPING_TRANSFER_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_TRANSFER_1'])){
+            $temp = explode(';',$this->feedData['FEED_SHIPPING_TRANSFER_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            } elseif ($this->feedData['FEED_SHIPPING_TRANSFER_2'] ){
+                return $this->feedData['FEED_SHIPPING_TRANSFER_2'];
+            }
+        } elseif ($this->feedData['FEED_SHIPPING_TRANSFER_2'] ){
+            return $this->feedData['FEED_SHIPPING_TRANSFER_2'];
+        }
+        return '';
+    }
+
+    public function getShippingDebit($product){
+        if($this->feedData['FEED_SHIPPING_DEBIT_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_DEBIT_1'])){
+            $temp = explode(';',$this->feedData['FEED_SHIPPING_DEBIT_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            } elseif ($this->feedData['FEED_SHIPPING_DEBIT_2'] ){
+                return $this->feedData['FEED_SHIPPING_DEBIT_2'];
+            }
+        } elseif ($this->feedData['FEED_SHIPPING_DEBIT_2'] ){
+            return $this->feedData['FEED_SHIPPING_DEBIT_2'];
+        }
+        return '';
+    }
+
+    public function getShippingAccount($product){
+        if($this->feedData['FEED_SHIPPING_ACCOUNT_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_ACCOUNT_1'])){
+            $temp = explode(';',$this->feedData['FEED_SHIPPING_ACCOUNT_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            } elseif ($this->feedData['FEED_SHIPPING_ACCOUNT_2'] ){
+                return $this->feedData['FEED_SHIPPING_ACCOUNT_2'];
+            }
+        } elseif ($this->feedData['FEED_SHIPPING_ACCOUNT_2'] ){
+            return $this->feedData['FEED_SHIPPING_ACCOUNT_2'];
+        }
+        return '';
+    }
+
+    public function getShippingMoneybookers($product){
+        if($this->feedData['FEED_SHIPPING_MONEYBOOKERS_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_MONEYBOOKERS_1'])){
+            $temp = explode(';',$this->feedData['FEED_SHIPPING_MONEYBOOKERS_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            } elseif ($this->feedData['FEED_SHIPPING_MONEYBOOKERS_2'] ){
+                return $this->feedData['FEED_SHIPPING_MONEYBOOKERS_2'];
+            }
+        } elseif ($this->feedData['FEED_SHIPPING_MONEYBOOKERS_2'] ){
+            return $this->feedData['FEED_SHIPPING_MONEYBOOKERS_2'];
+        }
+        return '';
+    }
+
+    public function getShippingGiropay($product){
+        if($this->feedData['FEED_SHIPPING_GIROPAY_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_GIROPAY_1'])){
+            $temp = explode(';',$this->feedData['FEED_SHIPPING_GIROPAY_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            } elseif ($this->feedData['FEED_SHIPPING_GIROPAY_2'] ){
+                return $this->feedData['FEED_SHIPPING_GIROPAY_2'];
+            }
+        } elseif ($this->feedData['FEED_SHIPPING_GIROPAY_2'] ){
+            return $this->feedData['FEED_SHIPPING_GIROPAY_2'];
+        }
+        return '';
+    }
+
+    public function getShippingComment(){
+        if(isset($this->feedData['FEED_SHIPPING_COMMENT'])){
+            return $this->feedData['FEED_SHIPPING_COMMENT'];
+        }
+        return '';
+    }
+
+    public function getShippingClickBy($product){
+        if($this->feedData['FEED_SHIPPING_CLICK_BUY_1'] != 'N' and is_string($this->feedData['FEED_SHIPPING_CLICK_BUY_1'])){
+            $temp = explode(';',$this->feedData['FEED_SHIPPING_CLICK_BUY_1']);
+            $temp = $temp[1] ;
+            if($product[$temp]){
+                return  $product[$temp] ;
+            } elseif ($this->feedData['FEED_SHIPPING_CLICK_BUY_2'] ){
+                return $this->feedData['FEED_SHIPPING_CLICK_BUY_2'];
+            }
+        } elseif ($this->feedData['FEED_SHIPPING_CLICK_BUY_2'] ){
+            return $this->feedData['FEED_SHIPPING_CLICK_BUY_2'];
+        }
+        return '';
     }
 
     public function getCategory($product){

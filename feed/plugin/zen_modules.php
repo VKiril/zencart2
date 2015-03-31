@@ -98,8 +98,8 @@ class FeedConnector implements FeedPlugin {
     {
         set_time_limit(0);
         $this->config->iniParameters();
-        $limit        = 10;
-        $offset       = 0;
+        $limit        = 5;
+        $offset       = 32;
         $tempContents = array();
 
         //save sessions cart contents
@@ -131,10 +131,11 @@ class FeedConnector implements FeedPlugin {
             foreach ($products as $product) {
                 $this->config->uploadCSVfileWithCombinations($csv_file,$product,$attributes,$fieldMap, $shopConfig,$queryParameters);
                // flush();
+
                 ++$count;
             }
             $offset += $limit;
-
+            die;
         } while ($count == $limit);
 
         fclose($csv_file);
