@@ -1,0 +1,1185 @@
+[01-Apr-2015 09:00:02 Europe/Paris] PHP Parse error:  syntax error, unexpected '.9900' (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:02 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:02 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:02 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:02 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:02 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:02 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:02 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:02 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:02 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:03 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:03 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Parse error:  syntax error, unexpected floating-point number (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 09:00:04 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 09:00:04 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Warning:  array_keys() expects parameter 1 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 1763
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   7. FeedConfig->allCombinations() K:\wamp\www\zencart\feed\config\FeedConfig.php:1793
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   8. array_keys() K:\wamp\www\zencart\feed\config\FeedConfig.php:1763
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Warning:  array_values() expects parameter 1 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 1764
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   7. FeedConfig->allCombinations() K:\wamp\www\zencart\feed\config\FeedConfig.php:1793
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   8. array_values() K:\wamp\www\zencart\feed\config\FeedConfig.php:1764
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Warning:  Invalid argument supplied for foreach() in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 1767
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   7. FeedConfig->allCombinations() K:\wamp\www\zencart\feed\config\FeedConfig.php:1793
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Warning:  Invalid argument supplied for foreach() in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 2729
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1807
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   8. FeedConfig->getProductVariants() K:\wamp\www\zencart\feed\config\FeedConfig.php:1876
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 2275
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1807
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   8. FeedConfig->getGender() K:\wamp\www\zencart\feed\config\FeedConfig.php:1897
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   9. array_key_exists() K:\wamp\www\zencart\feed\config\FeedConfig.php:2275
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 2297
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1807
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   8. FeedConfig->getSize() K:\wamp\www\zencart\feed\config\FeedConfig.php:1900
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   9. array_key_exists() K:\wamp\www\zencart\feed\config\FeedConfig.php:2297
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 2322
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1807
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   8. FeedConfig->getColor() K:\wamp\www\zencart\feed\config\FeedConfig.php:1903
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   9. array_key_exists() K:\wamp\www\zencart\feed\config\FeedConfig.php:2322
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 2357
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1807
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   8. FeedConfig->getMaterial() K:\wamp\www\zencart\feed\config\FeedConfig.php:1906
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   9. array_key_exists() K:\wamp\www\zencart\feed\config\FeedConfig.php:2357
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 2400
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1807
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   8. FeedConfig->getPacketSize() K:\wamp\www\zencart\feed\config\FeedConfig.php:1909
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   9. array_key_exists() K:\wamp\www\zencart\feed\config\FeedConfig.php:2400
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 2482
+[01-Apr-2015 09:00:06 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1807
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   8. FeedConfig->getShipping() K:\wamp\www\zencart\feed\config\FeedConfig.php:1915
+[01-Apr-2015 09:00:06 Europe/Paris] PHP   9. array_key_exists() K:\wamp\www\zencart\feed\config\FeedConfig.php:2482

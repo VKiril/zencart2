@@ -234,7 +234,7 @@ class FeedConfig {
         return $stdConfig;
     }
 
-	/*public function getShopAvailabilityConfig()
+	public function getShopAvailabilityConfig()
 	{
 		$oConfig = new stdClass();
 		$aAvailabilities[] = array('id' => '1', 'title' => 'No export inactive and with quantity = 0 products');
@@ -251,7 +251,7 @@ class FeedConfig {
 		}
 
 		return $oConfig;
-	}*/
+	}
 
 	public function getShopCurrencyConfig()
 	{
@@ -269,7 +269,7 @@ class FeedConfig {
 		return $oConfig;
 	}
 
-	/*public function getQueryFields()
+	public function getQueryFields()
 	{
 		return array(
 			'id' => 'id',
@@ -292,11 +292,11 @@ class FeedConfig {
 			'currencies_value' => 'currencies_value',
 			'special_price' => 'special_price',
 		);
-	}*/
+	}
 
     public function getProducts($limit, $offset, $queryParameters){
         $db = $GLOBALS['db'];
-        /*$select = '
+        $select = '
                 SELECT
                     p.products_id as products_id,
                     p.products_quantity as products_quantity,
@@ -312,11 +312,11 @@ class FeedConfig {
                     pd.products_url as products_url,
                     p.products_status as products_status
 
-        ';*/
-        $select  = '
+        ';
+        /*$select  = '
                 SELECT
                     *
-        ';
+        ';*/
         $from = ' FROM
                     '.TABLE_PRODUCTS.' p
                   inner join '.TABLE_PRODUCTS_DESCRIPTION.' pd on p.products_id=pd.products_id
@@ -369,7 +369,7 @@ class FeedConfig {
 
     public function getProductsAttr(){
         $db = $GLOBALS['db'];
-        /*$query  = '
+        $query  = '
                     select
                         pa.products_attributes_id as products_attributes_id,
                         pa.products_id as products_id,
@@ -382,15 +382,15 @@ class FeedConfig {
                     from '.TABLE_PRODUCTS_ATTRIBUTES.' pa
                     where pa.products_id in ('.$this->productsId.')
 
-        ';*/
+        ';
 
-        $query  = '
+        /*$query  = '
                     select
                         *
                     from '.TABLE_PRODUCTS_ATTRIBUTES.' pa
                     where pa.products_id in ('.$this->productsId.')
 
-        ';
+        ';*/
 
         $response = $this->dataFetch($db->Execute($query), true);
 
@@ -454,98 +454,7 @@ class FeedConfig {
      * @return object
      */
     //return data for one or more products, or data from order by Id
-    /*public function getProductsResource($queryParameters = null, $offset = 0, $limit = 0, $id = array()){
-        $db = $GLOBALS['db'];
 
-		// integrating fields if they was selected by user
-		$queryToAdd = $this->_addToQuery();
-
-        $query = "
-        	p.products_id AS id,
-			p.products_quantity AS quantity,
-			p.products_model AS model,
-			p.products_image AS image,
-			p.products_price AS price,
-			p.products_weight AS weight,
-			p.products_status AS status,
-			p.product_is_always_free_shipping AS always_free_shipping,
-			p.master_categories_id AS master_categories_id,
-			p.products_tax_class_id AS tax_class_id,
-			m.manufacturers_name AS manufacturers_name,
-			c.parent_id AS parent_id,
-			pd.language_id AS language_id,
-			pd.products_name AS products_name,
-			pd.products_description AS products_description,
-			sp.specials_new_products_price AS special_price
-        ";
-
-		if($queryParameters) {
-			$query .= ",
-				cr.code AS currencies_code,
-				cr.decimal_places AS currencies_decimal_places,
-				cr.value AS currencies_value,
-				sp.specials_new_products_price AS special_price
-        	";
-		}
-
-		$query .= $queryToAdd[0];
-
-        $t_query = "SELECT ";
-
-        $t_query .= $query."
-        	FROM	" . TABLE_PRODUCTS . " p
-			LEFT JOIN " . TABLE_CATEGORIES . " c
-			ON (c.categories_id = p.master_categories_id)
-
-			LEFT JOIN " . TABLE_MANUFACTURERS . " m
-			ON (p.manufacturers_id = m.manufacturers_id)
-		";
-
-		if($queryParameters) {
-			$t_query .= "
-				LEFT JOIN " . TABLE_PRODUCTS_DESCRIPTION . " pd
-				ON (p.products_id = pd.products_id AND pd.language_id = '" . $queryParameters->lang . "' )
-
-				LEFT JOIN " . TABLE_CURRENCIES . " cr
-				ON ( cr.currencies_id = ".$queryParameters->currency." )
-			";
-		} else {
-			$t_query .= "
-				LEFT JOIN " . TABLE_PRODUCTS_DESCRIPTION . " pd
-				ON (p.products_id = pd.products_id)
-			";
-		}
-
-        $t_query .= "
-			LEFT JOIN " . TABLE_SPECIALS . " sp
-			ON ( p.products_id = sp.products_id )
-        ";
-
-		$t_query .= $queryToAdd[1];
-
-        if( $id ){
-            $t_query .= " WHERE p.products_id IN ('".implode("','", $id)."')";
-        } else {
-            $t_query .= " WHERE p.products_id > 0";
-        }
-
-		switch($queryParameters->availability) {
-			case 1:
-				$t_query .= " AND (p.products_status != 0 AND p.products_quantity != 0) ";
-				break;
-			case 2:
-				$t_query .= " AND p.products_quantity != 0 ";
-				break;
-			case 3:
-				$t_query .= " AND p.products_status != 0 ";
-				break;
-		}
-
-        if ( $limit  ) { $t_query .= " LIMIT ".$limit; }
-        if ( $offset ) { $t_query .= " OFFSET ".$offset; }
-
-        return $this->dataFetch($db->Execute($t_query), true);
-    }*/
 
     /*public function getAttributes()
     {
@@ -600,7 +509,7 @@ class FeedConfig {
 	}*/
 
 	//function for checking if column products_id exist in tables $table
-	/*protected function _checkTables($tables)
+	protected function _checkTables($tables)
 	{
 		$db = $GLOBALS['db'];
 		$output = array();
@@ -636,9 +545,9 @@ class FeedConfig {
 				}
 			}
 		}
-	}*/
+	}
 
-    /*public function generate($index, $attributes, $options, $product_id)
+    public function generate($index, $attributes, $options, $product_id)
     {
         $attributes[$this->productAttributes[$product_id][$index]['products_attributes_id']] = $this->productAttributes[$product_id][$index]['products_attributes_id'];
         $options[$this->productAttributes[$product_id][$index]['options_id']] = $this->productAttributes[$product_id][$index]['options_id'];
@@ -654,10 +563,10 @@ class FeedConfig {
         }
 
         return $combinations;
-    }*/
+    }
 
 
-    /*public function getProductsAttributes($ids = array(), $products_ids = array())
+    public function getProductsAttributes($ids = array(), $products_ids = array())
     {
         $db = $GLOBALS['db'];
         $query = "
@@ -706,7 +615,7 @@ class FeedConfig {
             }
         }
 
-    }*/
+    }
 
 	//get and analyze the shipping parameters and set priority of fields
 	public function getFeedifyShippingParameters()
@@ -785,7 +694,7 @@ class FeedConfig {
 		return $result;
 	}
 
-	protected function _iniExtraAttributesParameters()
+	/*protected function _iniExtraAttributesParameters()
 	{
 		$db = $GLOBALS['db'];
 
@@ -821,7 +730,7 @@ class FeedConfig {
 				}
 			}
 		}
-	}
+	}*/
 
 	protected function _getOrdersAttributes($id)
 	{
@@ -889,7 +798,7 @@ class FeedConfig {
 		}
 
 		$this->getFeedifyShippingParameters();
-		$this->_iniExtraAttributesParameters();
+		//$this->_iniExtraAttributesParameters();
         $this->setProductsOptions();
         $this->setManufactures();
         $this->setCategories();
@@ -1041,7 +950,7 @@ class FeedConfig {
 	 * and options
 	 * generate product's variants
 	 */
-	public function allComboFeed($result, $attributes, $fieldMap, $queryParameters, $csv_file) {
+	/*public function allComboFeed($result, $attributes, $fieldMap, $queryParameters, $csv_file) {
 		if(array_key_exists($result['id'], $attributes)){
 			unset($this->productAttributes);
 			$this->productAttributes[$result['id']] = $attributes[$result['id']];
@@ -1056,12 +965,12 @@ class FeedConfig {
 		if( $result['attributes_combo'] && $result['attributes_value'] ) {
 			$this->_attributesFeedOrPrint($result, $temp, $csv_file);
 		}
-	}
+	}*/
 
 	/*
 	 * function used for feed one product
 	 */
-	public function getFeedRow($fieldMap, $oArticle, $Lang, $currency)
+	/*public function getFeedRow($fieldMap, $oArticle, $Lang, $currency)
 	{
 		$this->base_price = zen_get_products_base_price($oArticle['id']);
 		$this->price 	= zen_get_products_actual_price($oArticle['id'] );
@@ -1079,11 +988,11 @@ class FeedConfig {
 		}
 
 		return $row;
-	}
+	}*/
 
 	//function returns products from one order
 	//var $tracking is for activate tracking pixel product's id field change
-	public function getOrdersProducts($currency, $id, $print = true, $tracking = false)
+	/*public function getOrdersProducts($currency, $id, $print = true, $tracking = false)
 	{
 		$attributesIds = array();
 		$productsIds = array();
@@ -1160,17 +1069,17 @@ class FeedConfig {
 					unset ($temp[$key]);
 				}
 
-				/*foreach($products as $key => $product) {
-					$temp_2 = explode("_", $product['ModelOwn']);
-					$temp_2[0] = $temp[strtok($product['ModelOwn'], '_')][$idField];
-					$products[$key]['ModelOwn'] = implode('_', $temp_2);
-				}*/
+//				foreach($products as $key => $product) {
+//					$temp_2 = explode("_", $product['ModelOwn']);
+//					$temp_2[0] = $temp[strtok($product['ModelOwn'], '_')][$idField];
+//					$products[$key]['ModelOwn'] = implode('_', $temp_2);
+//				}
 			}
 			//end performing;
 
 			return $products;
 		}
-	}
+	}*/
 
 	/*
 	 * initialize parameters for
@@ -1344,14 +1253,14 @@ class FeedConfig {
 		return $taxZone;
 	}
 
-	/*protected function _getDeliveryTime()
-	{
-		$return = $this->getConfig('FEED_DTIME_FROM').'_'
-			.$this->getConfig('FEED_DTIME_TO').'_'
-			.$this->getConfig('FEED_DTIME_TYPE');
-
-		return $return;
-	}*/
+//	protected function _getDeliveryTime()
+//	{
+//		$return = $this->getConfig('FEED_DTIME_FROM').'_'
+//			.$this->getConfig('FEED_DTIME_TO').'_'
+//			.$this->getConfig('FEED_DTIME_TYPE');
+//
+//		return $return;
+//	}
 
 	protected function _initShipping()
 	{
@@ -1562,9 +1471,9 @@ class FeedConfig {
 
 			return $this->extraAttributes['Condition']['query'];
 		}
-	}*/
+	}
 
-	/*protected function _getAvailability($oArticle)
+	protected function _getAvailability($oArticle)
 	{
 		if($this->defaultPAvailability != 'N') {
 
@@ -1576,16 +1485,16 @@ class FeedConfig {
 	}*/
 
 	//key - shipping type name ex: "SHIPPING_PAYPAL_OST"
-	protected function _setShipping($oArticle, $key)
-	{
-		if($oArticle[$key."_2"]) {
-
-			return $oArticle[$key."_2"];
-		} else {
-
-			return $this->defaultsShipping[$key."_1"];
-		}
-	}
+//	protected function _setShipping($oArticle, $key)
+//	{
+//		if($oArticle[$key."_2"]) {
+//
+//			return $oArticle[$key."_2"];
+//		} else {
+//
+//			return $this->defaultsShipping[$key."_1"];
+//		}
+//	}
 
 	/**
 	 *  getImage
@@ -1595,15 +1504,15 @@ class FeedConfig {
 	 * @param $productImage
 	 * @return string
 	 */
-	/*protected function _getImage($productImage)
-	{
-		return 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['SCRIPT_NAME'])."/images/".$productImage;
-	}
-
-	protected function _getLink($productsId)
-	{
-		return 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['SCRIPT_NAME']).'/index.php?main_page=product_info&products_id='.strtok($productsId,'_');
-	}*/
+//	protected function _getImage($productImage)
+//	{
+//		return 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['SCRIPT_NAME'])."/images/".$productImage;
+//	}
+//
+//	protected function _getLink($productsId)
+//	{
+//		return 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['SCRIPT_NAME']).'/index.php?main_page=product_info&products_id='.strtok($productsId,'_');
+//	}
 
 	/*protected function _checkShippingPrice($row)
 	{
@@ -1658,7 +1567,7 @@ class FeedConfig {
 
 	}
 
-	protected function _shippingPriceCalculate($row){
+	/*protected function _shippingPriceCalculate($row){
 		$price = $this->shipping->cheapest();
 		$tax = zen_get_tax_rate($row['tax_class_id'], $this->taxZone['zone_country_id'], $this->taxZone['zone_id']);
 
@@ -1679,7 +1588,7 @@ class FeedConfig {
 		}
 
 		return $price;
-	}
+	}*/
 
 	/*protected function _getSpecialPrice($row)
 	{
@@ -1973,55 +1882,39 @@ class FeedConfig {
     }
 
     public function getCategoriesGoogle($product,$combinations,$attributes) {
+
         if($this->feedData['FEED_FIELD_GOOGLE_1'] != 'N' and is_string($this->feedData['FEED_FIELD_GOOGLE_1'])){
             $temp = explode(';',$this->feedData['FEED_FIELD_GOOGLE_1']);
             $temp = $temp[1] ;
             if($product[$temp]){
                 return  $product[$temp] ;
-            }elseif ($this->feedData['FEED_FIELD_GOOGLE_2'] != 'N' ){
-                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id']]] ;
-                }  elseif ( $this->feedData['FEED_FIELD_GOOGLE_3'] != '' ){
-                    return $this->feedData['FEED_FIELD_GOOGLE_3'] ;
-                }
-            }  elseif ( $this->feedData['FEED_FIELD_GOOGLE_3'] != '' ){
-                return $this->feedData['FEED_FIELD_GOOGLE_3'] ;
             }
-        } elseif ($this->feedData['FEED_FIELD_GOOGLE_2'] != 'N' ){
-            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id']]] ;
-            }  elseif ( $this->feedData['FEED_FIELD_GOOGLE_3'] != '' ){
-                return $this->feedData['FEED_FIELD_GOOGLE_3'] ;
+        }
+        if ($this->feedData['FEED_FIELD_GOOGLE_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )) {
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_GOOGLE_2']]['products_options_id']]];
             }
-        }  elseif ( $this->feedData['FEED_FIELD_GOOGLE_3'] != '' ){
-            return $this->feedData['FEED_FIELD_GOOGLE_3'] ;
+        }
+        if ( $this->feedData['FEED_FIELD_GOOGLE_3'] != '' ) {
+            return $this->feedData['FEED_FIELD_GOOGLE_3'];
         }
 
         return '';
     }
 
     public function getCategoriesYatego($product,$combinations,$attributes){
-        if($this->feedData['FEED_FIELD_YATEGOO_1'] != 'N' and is_string($this->feedData['FEED_FIELD_YATEGOO_1'])){
-            $temp = explode(';',$this->feedData['FEED_FIELD_YATEGOO_1']);
-            $temp = $temp[1] ;
-            if($product[$temp]){
-                return  $product[$temp] ;
-            }elseif ($this->feedData['FEED_FIELD_YATEGOO_2'] != 'N' ){
-                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id']]] ;
-                }  elseif ( $this->feedData['FEED_FIELD_YATEGOO_3'] != '' ){
-                    return $this->feedData['FEED_FIELD_YATEGOO_3'] ;
-                }
-            } elseif ( $this->feedData['FEED_FIELD_YATEGOO_3'] != '' ){
-                return $this->feedData['FEED_FIELD_YATEGOO_3'] ;
+        if($this->feedData['FEED_FIELD_YATEGOO_1'] != 'N' and is_string($this->feedData['FEED_FIELD_YATEGOO_1'])) {
+            $temp = explode(';', $this->feedData['FEED_FIELD_YATEGOO_1']);
+            $temp = $temp[1];
+            if ($product[$temp]) {
+                return $product[$temp];
             }
-        } elseif ($this->feedData['FEED_FIELD_YATEGOO_2'] != 'N' ){
-            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id']]] ;
-            }  elseif ( $this->feedData['FEED_FIELD_YATEGOO_3'] != '' ){
-                return $this->feedData['FEED_FIELD_YATEGOO_3'] ;
+        }
+        if ($this->feedData['FEED_FIELD_YATEGOO_2'] != 'N' ) {
+            if (array_key_exists($this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_YATEGOO_2']]['products_options_id']]];
             }
-        } elseif ( $this->feedData['FEED_FIELD_YATEGOO_3'] != '' ){
+        }if ( $this->feedData['FEED_FIELD_YATEGOO_3'] != '' ){
             return $this->feedData['FEED_FIELD_YATEGOO_3'] ;
         }
 
@@ -2029,27 +1922,19 @@ class FeedConfig {
     }
 
     public function getProductsEAN($product,$combinations,$attributes){
-        if($this->feedData['FEED_FIELD_EAN_1'] != 'N' and is_string($this->feedData['FEED_FIELD_EAN_1'])){
-            $temp = explode(';',$this->feedData['FEED_FIELD_EAN_1']);
-            $temp = $temp[1] ;
-            if($product[$temp]){
-                return  $product[$temp] ;
-            }elseif ($this->feedData['FEED_FIELD_EAN_2'] != 'N' ){
-                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id']]] ;
-                }  elseif ( $this->feedData['FEED_FIELD_EAN_3'] != '' ){
-                    return $this->feedData['FEED_FIELD_EAN_3'] ;
-                }
-            } elseif ( $this->feedData['FEED_FIELD_EAN_3'] != '' ){
-                return $this->feedData['FEED_FIELD_EAN_3'] ;
+        if($this->feedData['FEED_FIELD_EAN_1'] != 'N' and is_string($this->feedData['FEED_FIELD_EAN_1'])) {
+            $temp = explode(';', $this->feedData['FEED_FIELD_EAN_1']);
+            $temp = $temp[1];
+            if ($product[$temp]) {
+                return $product[$temp];
             }
-        } elseif ($this->feedData['FEED_FIELD_EAN_2'] != 'N' ){
-            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id']]] ;
-            }  elseif ( $this->feedData['FEED_FIELD_EAN_3'] != '' ){
-                return $this->feedData['FEED_FIELD_EAN_3'] ;
+        }
+        if ($this->feedData['FEED_FIELD_EAN_2'] != 'N' ) {
+            if (array_key_exists($this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_EAN_2']]['products_options_id']]];
             }
-        } elseif ( $this->feedData['FEED_FIELD_EAN_3'] != '' ){
+        }
+        if ( $this->feedData['FEED_FIELD_EAN_3'] != '' ){
             return $this->feedData['FEED_FIELD_EAN_3'] ;
         }
 
@@ -2057,27 +1942,18 @@ class FeedConfig {
     }
 
     public function getProductsISBN($product,$combinations,$attributes){
-        if($this->feedData['FEED_FIELD_ISBN_1'] != 'N' and is_string($this->feedData['FEED_FIELD_ISBN_1'])){
-            $temp = explode(';',$this->feedData['FEED_FIELD_ISBN_1']);
-            $temp = $temp[1] ;
-            if($product[$temp]){
-                return  $product[$temp] ;
-            }elseif ($this->feedData['FEED_FIELD_ISBN_2'] != 'N' ){
-                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id']]] ;
-                }  elseif ( $this->feedData['FEED_FIELD_ISBN_3'] != '' ){
-                    return $this->feedData['FEED_FIELD_ISBN_3'] ;
-                }
-            } elseif ( $this->feedData['FEED_FIELD_ISBN_3'] != '' ){
-                return $this->feedData['FEED_FIELD_ISBN_3'] ;
+        if($this->feedData['FEED_FIELD_ISBN_1'] != 'N' and is_string($this->feedData['FEED_FIELD_ISBN_1'])) {
+            $temp = explode(';', $this->feedData['FEED_FIELD_ISBN_1']);
+            $temp = $temp[1];
+            if ($product[$temp]) {
+                return $product[$temp];
             }
-        } elseif ($this->feedData['FEED_FIELD_ISBN_2'] != 'N' ){
-            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id']]] ;
-            }  elseif ( $this->feedData['FEED_FIELD_ISBN_3'] != '' ){
-                return $this->feedData['FEED_FIELD_ISBN_3'] ;
+        }
+        if ($this->feedData['FEED_FIELD_ISBN_2'] != 'N' ) {
+            if (array_key_exists($this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_ISBN_2']]['products_options_id']]];
             }
-        } elseif ( $this->feedData['FEED_FIELD_ISBN_3'] != '' ){
+        }if ( $this->feedData['FEED_FIELD_ISBN_3'] != '' ){
             return $this->feedData['FEED_FIELD_ISBN_3'] ;
         }
 
@@ -2113,27 +1989,19 @@ class FeedConfig {
     }
 
     public function getProductsPriceUVP($product,$combinations,$attributes){
-        if($this->feedData['FEED_FIELD_UVP_1'] != 'N' and is_string($this->feedData['FEED_FIELD_UVP_1'])){
-            $temp = explode(';',$this->feedData['FEED_FIELD_UVP_1']);
-            $temp = $temp[1] ;
-            if($product[$temp]){
-                return  $product[$temp] ;
-            }elseif ($this->feedData['FEED_FIELD_UVP_2'] != 'N' ){
-                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id']]] ;
-                }  elseif ( $this->feedData['FEED_FIELD_UVP_3'] != '' ){
-                    return $this->feedData['FEED_FIELD_UVP_3'] ;
-                }
-            } elseif ( $this->feedData['FEED_FIELD_UVP_3'] != '' ){
-                return $this->feedData['FEED_FIELD_UVP_3'] ;
+        if($this->feedData['FEED_FIELD_UVP_1'] != 'N' and is_string($this->feedData['FEED_FIELD_UVP_1'])) {
+            $temp = explode(';', $this->feedData['FEED_FIELD_UVP_1']);
+            $temp = $temp[1];
+            if ($product[$temp]) {
+                return $product[$temp];
             }
-        } elseif ($this->feedData['FEED_FIELD_UVP_2'] != 'N' ){
-            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id']]] ;
-            }  elseif ( $this->feedData['FEED_FIELD_UVP_3'] != '' ){
-                return $this->feedData['FEED_FIELD_UVP_3'] ;
+        }
+        if ($this->feedData['FEED_FIELD_UVP_2'] != 'N' ) {
+            if (array_key_exists($this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_UVP_2']]['products_options_id']]];
             }
-        } elseif ( $this->feedData['FEED_FIELD_UVP_3'] != '' ){
+        }
+        if ( $this->feedData['FEED_FIELD_UVP_3'] != '' ){
             return $this->feedData['FEED_FIELD_UVP_3'] ;
         }
 
@@ -2141,27 +2009,19 @@ class FeedConfig {
     }
 
     public function getBasePrice($product,$combinations,$attributes){
-        if($this->feedData['FEED_FIELD_BASE_PRICE_1'] != 'N' and is_string($this->feedData['FEED_FIELD_BASE_PRICE_1'])){
-            $temp = explode(';',$this->feedData['FEED_FIELD_BASE_PRICE_1']);
-            $temp = $temp[1] ;
-            if($product[$temp]){
-                return  $product[$temp] ;
-            }elseif ($this->feedData['FEED_FIELD_BASE_PRICE_2'] != 'N' ){
-                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id']]] ;
-                }  elseif ( $this->feedData['FEED_FIELD_BASE_PRICE_3'] != '' ){
-                    return $this->feedData['FEED_FIELD_BASE_PRICE_3'] ;
-                }
-            } elseif ( $this->feedData['FEED_FIELD_BASE_PRICE_3'] != '' ){
-                return $this->feedData['FEED_FIELD_BASE_PRICE_3'] ;
+        if($this->feedData['FEED_FIELD_BASE_PRICE_1'] != 'N' and is_string($this->feedData['FEED_FIELD_BASE_PRICE_1'])) {
+            $temp = explode(';', $this->feedData['FEED_FIELD_BASE_PRICE_1']);
+            $temp = $temp[1];
+            if ($product[$temp]) {
+                return $product[$temp];
             }
-        } elseif ($this->feedData['FEED_FIELD_BASE_PRICE_2'] != 'N' ){
-            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id']]] ;
-            }  elseif ( $this->feedData['FEED_FIELD_BASE_PRICE_3'] != '' ){
-                return $this->feedData['FEED_FIELD_BASE_PRICE_3'] ;
+        }
+        if ($this->feedData['FEED_FIELD_BASE_PRICE_2'] != 'N' ) {
+            if (array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_PRICE_2']]['products_options_id']]];
             }
-        } elseif ( $this->feedData['FEED_FIELD_BASE_PRICE_3'] != '' ){
+        }
+        if ( $this->feedData['FEED_FIELD_BASE_PRICE_3'] != '' ){
             return $this->feedData['FEED_FIELD_BASE_PRICE_3'] ;
         }
 
@@ -2169,27 +2029,19 @@ class FeedConfig {
     }
 
     public function getBaseUnit($product,$combinations,$attributes){
-        if($this->feedData['FEED_FIELD_BASE_UNIT_1'] != 'N' and is_string($this->feedData['FEED_FIELD_BASE_UNIT_1'])){
-            $temp = explode(';',$this->feedData['FEED_FIELD_BASE_UNIT_1']);
-            $temp = $temp[1] ;
-            if($product[$temp]){
-                return  $product[$temp] ;
-            }elseif ($this->feedData['FEED_FIELD_BASE_UNIT_2'] != 'N' ){
-                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id']]] ;
-                }  elseif ( $this->feedData['FEED_FIELD_BASE_UNIT_3'] != '' ){
-                    return $this->feedData['FEED_FIELD_BASE_UNIT_3'] ;
-                }
-            } elseif ( $this->feedData['FEED_FIELD_BASE_UNIT_3'] != '' ){
-                return $this->feedData['FEED_FIELD_BASE_UNIT_3'] ;
+        if($this->feedData['FEED_FIELD_BASE_UNIT_1'] != 'N' and is_string($this->feedData['FEED_FIELD_BASE_UNIT_1'])) {
+            $temp = explode(';', $this->feedData['FEED_FIELD_BASE_UNIT_1']);
+            $temp = $temp[1];
+            if ($product[$temp]) {
+                return $product[$temp];
             }
-        } elseif ($this->feedData['FEED_FIELD_BASE_UNIT_2'] != 'N' ){
-            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id']]] ;
-            }  elseif ( $this->feedData['FEED_FIELD_BASE_UNIT_3'] != '' ){
-                return $this->feedData['FEED_FIELD_BASE_UNIT_3'] ;
+        }
+        if ($this->feedData['FEED_FIELD_BASE_UNIT_2'] != 'N' ) {
+            if (array_key_exists($this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_BASE_UNIT_2']]['products_options_id']]];
             }
-        } elseif ( $this->feedData['FEED_FIELD_BASE_UNIT_3'] != '' ){
+        }
+        if ( $this->feedData['FEED_FIELD_BASE_UNIT_3'] != '' ){
             return $this->feedData['FEED_FIELD_BASE_UNIT_3'] ;
         }
 
@@ -2228,27 +2080,19 @@ class FeedConfig {
     }
 
     public function getCoupon($product,$combinations,$attributes){
-        if($this->feedData['FEED_FIELD_COUPON_1'] != 'N' and is_string($this->feedData['FEED_FIELD_COUPON_1'])){
-            $temp = explode(';',$this->feedData['FEED_FIELD_COUPON_1']);
-            $temp = $temp[1] ;
-            if($product[$temp]){
-                return  $product[$temp] ;
-            }elseif ($this->feedData['FEED_FIELD_COUPON_2'] != 'N' ){
-                if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id']]] ;
-                }  elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
-                    return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
-                }
-            } elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
-                return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
+        if($this->feedData['FEED_FIELD_COUPON_1'] != 'N' and is_string($this->feedData['FEED_FIELD_COUPON_1'])) {
+            $temp = explode(';', $this->feedData['FEED_FIELD_COUPON_1']);
+            $temp = $temp[1];
+            if ($product[$temp]) {
+                return $product[$temp];
             }
-        } elseif ($this->feedData['FEED_FIELD_COUPON_2'] != 'N' ){
-            if( array_key_exists($this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id']]] ;
-            }  elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
-                return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
+        }
+        if ($this->feedData['FEED_FIELD_COUPON_2'] != 'N' ) {
+            if (array_key_exists($this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_COUPON_2']]['products_options_id']]];
             }
-        } elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
+        }
+        if ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
             return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
         }
 
@@ -2256,27 +2100,19 @@ class FeedConfig {
     }
 
     public function getGender($product,$combinations,$attributes){
-        if($this->feedData['FEED_FIELD_GENDER_1'] != 'N' and is_string($this->feedData['FEED_FIELD_GENDER_1'])){
-            $temp = explode(';',$this->feedData['FEED_FIELD_GENDER_1']);
-            $temp = $temp[1] ;
-            if($product[$temp]){
-                return  $product[$temp] ;
-            }elseif ($this->feedData['FEED_ATTRIBUTES_GENDER_2'] != 'N' ){
-                if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id']]] ;
-                }  elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
-                    return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
-                }
-            } elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
-                return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
+        if($this->feedData['FEED_FIELD_GENDER_1'] != 'N' and is_string($this->feedData['FEED_FIELD_GENDER_1'])) {
+            $temp = explode(';', $this->feedData['FEED_FIELD_GENDER_1']);
+            $temp = $temp[1];
+            if ($product[$temp]) {
+                return $product[$temp];
             }
-        } elseif ($this->feedData['FEED_ATTRIBUTES_GENDER_2'] != 'N' ){
-            if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id']]] ;
-            }  elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
-                return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
+        }
+        if ($this->feedData['FEED_ATTRIBUTES_GENDER_2'] != 'N' ) {
+            if (array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_GENDER_2']]['products_options_id']]];
             }
-        } elseif ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
+        }
+        if ( $this->feedData['FEED_ATTRIBUTES_GENDER_3'] != '' ){
             return $this->feedData['FEED_ATTRIBUTES_GENDER_3'] ;
         }
 
@@ -2290,15 +2126,17 @@ class FeedConfig {
             if($product[$temp]){
 
                 return  $product[$temp] ;
-            }elseif ($this->feedData['FEED_ATTRIBUTES_SIZE_2'] != 'N' ){
-                if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_SIZE_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_SIZE_2']]['products_options_id']]] ;
-                }  elseif ( $this->feedData['FEED_ATTRIBUTES_SIZE_3'] != '' ){
-
-                    return $this->feedData['FEED_ATTRIBUTES_SIZE_3'] ;
-                }
             }
+        }
+        if ($this->feedData['FEED_ATTRIBUTES_SIZE_2'] != 'N' ){
+            if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_SIZE_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_SIZE_2']]['products_options_id']]] ;
+            }
+        }
+        if ( $this->feedData['FEED_ATTRIBUTES_SIZE_3'] != '' ){
+
+            return $this->feedData['FEED_ATTRIBUTES_SIZE_3'] ;
         }
 
         return '';
@@ -2312,49 +2150,41 @@ class FeedConfig {
             if($product[$temp]){
 
                 return  $product[$temp] ;
-            }elseif ($this->feedData['FEED_ATTRIBUTES_COLOR_2'] != 'N' ){
-                //var_dump( $attributes[$product['products_id']]['options_list']);die;
-                if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_COLOR_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_COLOR_2']]['products_options_id']]] ;
-                }  elseif ( $this->feedData['FEED_ATTRIBUTES_COLOR_3'] != '' ){
-
-                    return $this->feedData['FEED_ATTRIBUTES_COLOR_3'] ;
-                }
             }
         }
+        if ($this->feedData['FEED_ATTRIBUTES_COLOR_2'] != 'N' ){
+                //var_dump( $attributes[$product['products_id']]['options_list']);die;
+            if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_COLOR_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_COLOR_2']]['products_options_id']]] ;
+            }
+        }
+        if ( $this->feedData['FEED_ATTRIBUTES_COLOR_3'] != '' ){
+
+            return $this->feedData['FEED_ATTRIBUTES_COLOR_3'] ;
+        }
+
+
 
         return '';
     }
 
     public function getMaterial($product,$combinations,$attributes){
-        if($this->feedData['FEED_FIELD_MATERIAL_1'] != 'N' and is_string($this->feedData['FEED_FIELD_MATERIAL_1'])){
-            $temp = explode(';',$this->feedData['FEED_FIELD_MATERIAL_1']);
-            $temp = $temp[1] ;
-            if($product[$temp]){
+        if($this->feedData['FEED_FIELD_MATERIAL_1'] != 'N' and is_string($this->feedData['FEED_FIELD_MATERIAL_1'])) {
+            $temp = explode(';', $this->feedData['FEED_FIELD_MATERIAL_1']);
+            $temp = $temp[1];
+            if ($product[$temp]) {
 
-                return  $product[$temp] ;
-            }elseif ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ){
-                if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]] ;
-                }  elseif ( $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] != '' ){
-
-                    return $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] ;
-                }
-            } elseif ( $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] != '' ){
-
-                return $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] ;
+                return $product[$temp];
             }
-        } elseif ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ){
-            if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+        }
+        if ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ) {
+            if (array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
 
-                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]] ;
-            }  elseif ( $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] != '' ){
-
-                return $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] ;
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]];
             }
-        } elseif ( $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] != '' ){
+        }
+        if ( $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] != '' ){
 
             return $this->feedData['FEED_ATTRIBUTES_MATERIAL_3'] ;
         }
@@ -2363,51 +2193,27 @@ class FeedConfig {
     }
 
     public function getPacketSize($product,$combinations,$attributes){
-        if($this->feedData['FEED_FIELD_MATERIAL_1'] != 'N' and is_string($this->feedData['FEED_FIELD_MATERIAL_1'])){
-            $temp = explode(';',$this->feedData['FEED_FIELD_MATERIAL_1']);
-            $temp = $temp[1] ;
-            if($product[$temp]){
+        if($this->feedData['FEED_FIELD_MATERIAL_1'] != 'N' and is_string($this->feedData['FEED_FIELD_MATERIAL_1'])) {
+            $temp = explode(';', $this->feedData['FEED_FIELD_MATERIAL_1']);
+            $temp = $temp[1];
+            if ($product[$temp]) {
 
-                return  $product[$temp] ;
-            }elseif ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ){
-                if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
+                return $product[$temp];
+            }
+        }
+        if ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ) {
+            if (array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
 
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]] ;
-                }  elseif( $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'] !='' and
+                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]];
+            }
+        }
+        if( $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'] !='' and
                     $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH']  !='' and
                     $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] !='' ){
 
-                    return $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'].'x'.
+            return $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'].'x'.
                     $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH'] . 'x'.
                     $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] . ' cm';
-                }
-            } elseif( $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'] !='' and
-                $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH']  !='' and
-                $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] !='' ){
-
-                return $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'].'x'.
-                $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH'] . 'x'.
-                $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] . ' cm';
-            }
-        } elseif ($this->feedData['FEED_ATTRIBUTES_MATERIAL_2'] != 'N' ){
-            if( array_key_exists($this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
-
-                return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_ATTRIBUTES_MATERIAL_2']]['products_options_id']]] ;
-            }  elseif( $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'] !='' and
-                $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH']  !='' and
-                $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] !='' ){
-
-                return $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'].'x'.
-                $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH'] . 'x'.
-                $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] . ' cm';
-            }
-        } elseif( $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'] !='' and
-            $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH']  !='' and
-            $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] !='' ){
-
-            return $this->feedData['FEED_FIELD_PACKET_SIZE_LENGTH'].'x'.
-            $this->feedData['FEED_FIELD_PACKET_SIZE_WIDTH'] . 'x'.
-            $this->feedData['FEED_FIELD_PACKET_SIZE_HEIGHT'] . ' cm';
         }
 
         return '';
@@ -2422,6 +2228,7 @@ class FeedConfig {
                 return  $product[$temp] ;
             }
         }
+
         if ($this->feedData['FEED_DTIME_2'] != 'N' ){
             if( array_key_exists($this->product_options[$this->feedData['FEED_DTIME_2']]['products_options_id'] , $attributes[$product['products_id']]['options_list'] )){
                 return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_DTIME_2']]['products_options_id']]] ;
@@ -2461,24 +2268,17 @@ class FeedConfig {
             $temp = $temp[1];
             if ($product[$temp]) {
                 return $product[$temp];
-            } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_2'] != 'N') {
-                if (array_key_exists($this->product_options[$this->feedData['FEED_FIELD_SHIPPING_COST_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
-                    return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_SHIPPING_COST_2']]['products_options_id']]];
-                } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_3'] != '') {
-                    return $this->feedData['FEED_FIELD_SHIPPING_COST_3'];
-                }
-            } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_3'] != '') {
-                return $this->feedData['FEED_FIELD_SHIPPING_COST_3'];
             }
-        } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_2'] != 'N') {
+        }
+        if ($this->feedData['FEED_FIELD_SHIPPING_COST_2'] != 'N') {
             if (array_key_exists($this->product_options[$this->feedData['FEED_FIELD_SHIPPING_COST_2']]['products_options_id'], $attributes[$product['products_id']]['options_list'])) {
                 return $this->product_option_values[$combinations[$this->product_options[$this->feedData['FEED_FIELD_SHIPPING_COST_2']]['products_options_id']]];
-            } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_3'] != '') {
-                return $this->feedData['FEED_FIELD_SHIPPING_COST_3'];
             }
-        } elseif ($this->feedData['FEED_FIELD_SHIPPING_COST_3'] != '') {
+        }
+        if ($this->feedData['FEED_FIELD_SHIPPING_COST_3'] != '') {
             return $this->feedData['FEED_FIELD_SHIPPING_COST_3'];
         }
+
         return '';
     }
 

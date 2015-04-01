@@ -1,0 +1,10 @@
+[01-Apr-2015 08:49:32 Europe/Paris] PHP Parse error:  syntax error, unexpected '.9900' (T_DNUMBER) in K:\wamp\www\zencart\feed\config\FeedConfig.php(2095) : eval()'d code on line 1
+[01-Apr-2015 08:49:32 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 08:49:32 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[01-Apr-2015 08:49:32 Europe/Paris] PHP   2. Feed->dispatch() K:\wamp\www\zencart\feed.php:16
+[01-Apr-2015 08:49:32 Europe/Paris] PHP   3. FeedDispatcher->dispatch() K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[01-Apr-2015 08:49:32 Europe/Paris] PHP   4. FeedDispatcher->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[01-Apr-2015 08:49:32 Europe/Paris] PHP   5. FeedConnector->getFeed() K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[01-Apr-2015 08:49:32 Europe/Paris] PHP   6. FeedConfig->uploadCSVfileWithCombinations() K:\wamp\www\zencart\feed\plugin\zen_modules.php:132
+[01-Apr-2015 08:49:32 Europe/Paris] PHP   7. FeedConfig->getRowElements() K:\wamp\www\zencart\feed\config\FeedConfig.php:1799
+[01-Apr-2015 08:49:32 Europe/Paris] PHP   8. FeedConfig->getProductsPriceBrut() K:\wamp\www\zencart\feed\config\FeedConfig.php:1858
