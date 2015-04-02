@@ -108,10 +108,10 @@ class FeedConnector implements FeedPlugin {
             $_SESSION['cart']->reset();
         }
 
-        /*header('Content-Encoding: UTF-8');
+        header('Content-Encoding: UTF-8');
         header("Content-type: text/csv; charset=UTF-8");
         header('Content-Disposition: attachment; filename=feed.csv');
-        mb_internal_encoding("UTF-8");*/
+        mb_internal_encoding("UTF-8");
 
 
         $csv_file = fopen("php://output", 'w+');
