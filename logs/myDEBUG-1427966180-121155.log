@@ -1,0 +1,8 @@
+[02-Apr-2015 11:16:21 Europe/Paris] PHP Warning:  Invalid argument supplied for foreach() in K:\wamp\www\zencart\feed\config\FeedConfig.php on line 758
+[02-Apr-2015 11:16:21 Europe/Paris] PHP Stack trace:
+[02-Apr-2015 11:16:21 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\index.php:0
+[02-Apr-2015 11:16:21 Europe/Paris] PHP   2. require() K:\wamp\www\zencart\index.php:36
+[02-Apr-2015 11:16:21 Europe/Paris] PHP   3. require_once() K:\wamp\www\zencart\includes\modules\pages\checkout_success\header_php.php:160
+[02-Apr-2015 11:16:21 Europe/Paris] PHP   4. FeedConfig->getOrdersProducts($currency = *uninitialized*, $id = *uninitialized*, $print = *uninitialized*, $tracking = *uninitialized*) K:\wamp\www\zencart\feed\tracking_pixel\tp_checkout_success.php:31
+[02-Apr-2015 11:16:21 Europe/Paris] PHP   5. FeedConfig->getAttributes() K:\wamp\www\zencart\feed\config\FeedConfig.php:691
+[02-Apr-2015 11:16:21 Europe/Paris] PHP   6. FeedConfig->_getAllAttributesCombo() K:\wamp\www\zencart\feed\config\FeedConfig.php:752

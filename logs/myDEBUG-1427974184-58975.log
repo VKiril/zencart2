@@ -1,0 +1,25 @@
+[02-Apr-2015 13:29:46 Europe/Paris] PHP Fatal error:  1054:Unknown column 'op.products_options' in 'on clause' :: 
+                select
+                    op.products_id as products_id,
+                    op.products_price as products_price,
+                    po.products_options_id as products_options_id
+        
+                from orders_products op
+        
+                inner join orders_products_attributes opa on opa.orders_id = op.orders_id
+                inner join products_options po on po.products_options_name = op.products_options
+        
+                where op.orders_id =9 in K:\wamp\www\zencart\includes\classes\db\mysql\query_factory.php on line 120
+[02-Apr-2015 13:29:46 Europe/Paris] PHP Stack trace:
+[02-Apr-2015 13:29:46 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\feed.php:0
+[02-Apr-2015 13:29:46 Europe/Paris] PHP   2. Feed->dispatch($request = *uninitialized*) K:\wamp\www\zencart\feed.php:16
+[02-Apr-2015 13:29:46 Europe/Paris] PHP   3. FeedDispatcher->dispatch($request = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\Feed.php:74
+[02-Apr-2015 13:29:46 Europe/Paris] PHP   4. FeedDispatcher->getFeed($args = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:45
+[02-Apr-2015 13:29:46 Europe/Paris] PHP   5. FeedConnector->getFeed($queryParameters = *uninitialized*, $fieldMap = *uninitialized*) K:\wamp\www\zencart\feed\sdk\core\FeedDispatcher.php:92
+[02-Apr-2015 13:29:46 Europe/Paris] PHP   6. FeedConfig->getProductsAttr() K:\wamp\www\zencart\feed\plugin\zen_modules.php:128
+[02-Apr-2015 13:29:46 Europe/Paris] PHP   7. FeedConfig->getOrdersProducts($currency = *uninitialized*, $id = *uninitialized*, $print = *uninitialized*, $tracking = *uninitialized*) K:\wamp\www\zencart\feed\config\FeedConfig.php:371
+[02-Apr-2015 13:29:46 Europe/Paris] PHP   8. FeedConfig->_getOrdersAttributes($id = *uninitialized*) K:\wamp\www\zencart\feed\config\FeedConfig.php:699
+[02-Apr-2015 13:29:46 Europe/Paris] PHP   9. queryFactory->Execute($zf_sql = *uninitialized*, $zf_limit = *uninitialized*, $zf_cache = *uninitialized*, $zf_cachetime = *uninitialized*) K:\wamp\www\zencart\feed\config\FeedConfig.php:679
+[02-Apr-2015 13:29:46 Europe/Paris] PHP  10. queryFactory->set_error($zp_err_num = *uninitialized*, $zp_err_text = *uninitialized*, $zp_fatal = *uninitialized*) K:\wamp\www\zencart\includes\classes\db\mysql\query_factory.php:227
+[02-Apr-2015 13:29:46 Europe/Paris] PHP  11. queryFactory->show_error() K:\wamp\www\zencart\includes\classes\db\mysql\query_factory.php:105
+[02-Apr-2015 13:29:46 Europe/Paris] PHP  12. trigger_error(*uninitialized*, *uninitialized*) K:\wamp\www\zencart\includes\classes\db\mysql\query_factory.php:120

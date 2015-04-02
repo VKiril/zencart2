@@ -98,8 +98,8 @@ class FeedConnector implements FeedPlugin {
     {
         set_time_limit(0);
         $this->config->iniParameters();
-        $limit        = 5;
-        $offset       = 32;
+        $limit        = 10;
+        $offset       = 0;
         $tempContents = array();
 
         //save sessions cart contents
@@ -110,8 +110,8 @@ class FeedConnector implements FeedPlugin {
 
         /*header('Content-Encoding: UTF-8');
         header("Content-type: text/csv; charset=UTF-8");
-        header('Content-Disposition: attachment; filename=feed.csv');*/
-        //mb_internal_encoding("UTF-8");
+        header('Content-Disposition: attachment; filename=feed.csv');
+        mb_internal_encoding("UTF-8");*/
 
 
         $csv_file = fopen("php://output", 'w+');
@@ -123,19 +123,18 @@ class FeedConnector implements FeedPlugin {
         fputcsv($csv_file, array_keys($fieldMap), ';', '"');
         $shopConfig = $this->getShopConfig();
         do{
-            //$temp_result = $product = $this->config->getProductsResource($queryParameters, $offset, $limit);
+
             $products   = $this->config->getProducts($limit, $offset,$queryParameters);
             $attributes = $this->config->getProductsAttr();
             $count = 0;
 
             foreach ($products as $product) {
                 $this->config->uploadCSVfileWithCombinations($csv_file,$product,$attributes,$fieldMap, $shopConfig,$queryParameters);
-               // flush();
+                flush();
 
                 ++$count;
             }
             $offset += $limit;
-            die;
         } while ($count == $limit);
 
         fclose($csv_file);

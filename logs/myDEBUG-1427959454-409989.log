@@ -1,0 +1,4 @@
+[02-Apr-2015 09:24:15 Europe/Paris] PHP Warning:  Illegal string offset 'title' in K:\wamp\www\zencart\includes\modules\pages\checkout_shipping\header_php.php on line 88
+[02-Apr-2015 09:24:15 Europe/Paris] PHP Stack trace:
+[02-Apr-2015 09:24:15 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\index.php:0
+[02-Apr-2015 09:24:15 Europe/Paris] PHP   2. require() K:\wamp\www\zencart\index.php:36

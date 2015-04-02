@@ -36,9 +36,17 @@ function allCombinations($arrays)
 /*$math = '5*100/4';
 $result = eval( "return ${math};" );
 printf("%s = %s\n", $math, $result);*/
-$result = 10 - 1;
+/*$result = 10 - 1;
 echo $result;
 $expression = '10 - 1';
 eval( '$result = (' . $expression . ');' );
-echo '<br/>'.$result;
+echo '<br/>'.$result;*/
 //var_dump(eval("\$value = \"1+3+4\";"));
+
+
+
+
+
+/*require_once('feed/config/FeedConfig.php');
+$feedConfig = new FeedConfig();
+var_dump($feedConfig);*/

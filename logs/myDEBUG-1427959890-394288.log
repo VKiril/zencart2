@@ -1,0 +1,33 @@
+[02-Apr-2015 09:31:31 Europe/Paris] PHP Warning:  Illegal string offset 'id' in K:\wamp\www\zencart\includes\classes\shipping.php on line 32
+[02-Apr-2015 09:31:31 Europe/Paris] PHP Stack trace:
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\index.php:0
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   2. require() K:\wamp\www\zencart\index.php:36
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   3. require() K:\wamp\www\zencart\includes\modules\pages\checkout_process\header_php.php:14
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   4. shipping->shipping() K:\wamp\www\zencart\includes\modules\checkout_process.php:53
+[02-Apr-2015 09:31:31 Europe/Paris] PHP Warning:  Illegal string offset 'id' in K:\wamp\www\zencart\includes\classes\shipping.php on line 32
+[02-Apr-2015 09:31:31 Europe/Paris] PHP Stack trace:
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\index.php:0
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   2. require() K:\wamp\www\zencart\index.php:36
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   3. require() K:\wamp\www\zencart\includes\modules\pages\checkout_process\header_php.php:14
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   4. shipping->shipping() K:\wamp\www\zencart\includes\modules\checkout_process.php:53
+[02-Apr-2015 09:31:31 Europe/Paris] PHP Warning:  Illegal string offset 'cost' in K:\wamp\www\zencart\includes\classes\order.php on line 355
+[02-Apr-2015 09:31:31 Europe/Paris] PHP Stack trace:
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\index.php:0
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   2. require() K:\wamp\www\zencart\index.php:36
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   3. require() K:\wamp\www\zencart\includes\modules\pages\checkout_process\header_php.php:14
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   4. order->order() K:\wamp\www\zencart\includes\modules\checkout_process.php:56
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   5. order->cart() K:\wamp\www\zencart\includes\classes\order.php:34
+[02-Apr-2015 09:31:31 Europe/Paris] PHP Warning:  Illegal string offset 'id' in K:\wamp\www\zencart\includes\modules\order_total\ot_shipping.php on line 41
+[02-Apr-2015 09:31:31 Europe/Paris] PHP Stack trace:
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\index.php:0
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   2. require() K:\wamp\www\zencart\index.php:36
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   3. require() K:\wamp\www\zencart\includes\modules\pages\checkout_process\header_php.php:14
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   4. order_total->order_total() K:\wamp\www\zencart\includes\modules\checkout_process.php:64
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   5. ot_shipping->ot_shipping() K:\wamp\www\zencart\includes\classes\order_total.php:47
+[02-Apr-2015 09:31:31 Europe/Paris] PHP Warning:  Illegal string offset 'id' in K:\wamp\www\zencart\includes\modules\order_total\ot_shipping.php on line 41
+[02-Apr-2015 09:31:31 Europe/Paris] PHP Stack trace:
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\index.php:0
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   2. require() K:\wamp\www\zencart\index.php:36
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   3. require() K:\wamp\www\zencart\includes\modules\pages\checkout_process\header_php.php:14
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   4. order_total->order_total() K:\wamp\www\zencart\includes\modules\checkout_process.php:64
+[02-Apr-2015 09:31:31 Europe/Paris] PHP   5. ot_shipping->ot_shipping() K:\wamp\www\zencart\includes\classes\order_total.php:47

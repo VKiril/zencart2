@@ -155,3 +155,10 @@ submit_form();
 
 // This should be last line of the script:
 $zco_notifier->notify('NOTIFY_HEADER_END_CHECKOUT_SUCCESS');
+$file = __DIR__.'/../../../../feed/tracking_pixel/tp_checkout_success.php';
+if(file_exists($file)){
+    require_once($file);
+}
+?>
+
+

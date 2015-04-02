@@ -4,14 +4,12 @@
     $db = $GLOBALS['db'];
     $result = $db->Execute("SELECT configuration_value FROM ".TABLE_CONFIGURATION." WHERE configuration_key = 'FEED_TRACKING_PIXEL_STATUS'");
     $pixelActive = $result->fields['configuration_value'];
-
     if ($pixelActive === 'Y'){ // && isset($_COOKIE['_fr'])) {
 		$config = new FeedConfig();
 		$config->iniParameters();
 
         $result = $db->Execute("SELECT configuration_value FROM ".TABLE_CONFIGURATION." WHERE configuration_key = 'FEED_CLIENT_ID'");
         $feedifyClientId = $result->fields['configuration_value'];
-
         $result = $db->Execute("SELECT value FROM ".TABLE_ORDERS_TOTAL." WHERE orders_id = ".$orders_id." AND title = 'Total:'");
         $orderSum = $result->fields['value'];
 
@@ -29,12 +27,22 @@
         $currency = $result->fields['currency'];
 
 		$products = '';
+
 		$productsData = $config->getOrdersProducts($result->fields['currencies_id'], $orders_id, false, true);
+        //var_dump($productsData);die;
 		foreach ($productsData as $product) {
 			//$tax = zen_get_tax_rate($product['tax_class_id'], $config->taxZone['zone_country_id'], $config->taxZone['zone_id']);
-			$price = $product['BasePrice'];
-			$products .= $product['ModelOwn']."=".$price."=".$product['Quantity'].";";
+			$price = $product['product']['price'];
+            $quantity = $product['product']['qty'] ;
+            $products .= $product['attributes']['ModelOwn']."=".$price."=".$quantity.";";
 		}
+
+        /*
+
+        $orderid = 9 ;
+        $products = "25=69.9900=2;166=3.0000=1;171=0.9346=3;"
+
+        */
 ?>
 
         <script type="text/javascript">
@@ -44,8 +52,6 @@
             _feeparams.client = '<?php echo isset($feedifyClientId) ? $feedifyClientId : ''; ?>';
             //Required tracking type
             _feeparams.event = 'sale';
-            //Required from coockie _fr (refererId) for statistics
-            _feeparams._fr = '<?php echo isset($_COOKIE['_fr']) ? (int) $_COOKIE['_fr'] : ''; ?>';
             //Required for tracking the sales (your internal orderID)
             _feeparams.orderid = '<?php echo $orders_id ?>';
             //Required for tracking the sales (order sum)
@@ -59,8 +65,6 @@
             _feeparams.products = '<?php echo $products ?>';
             //Additional parameters
             _feeparams.sparam = '';
-            //Optional from coockie _fs
-            _feeparams._fs = '<?php echo isset($_COOKIE['_fs']) ? (int) $_COOKIE['_fs'] : ''; ?>';
             (function () {
                 //console.log(_feeparams);
                 var head = document.getElementsByTagName('head')[0];

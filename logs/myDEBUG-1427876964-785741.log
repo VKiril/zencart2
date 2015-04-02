@@ -1,0 +1,6 @@
+[01-Apr-2015 10:29:25 Europe/Paris] PHP Fatal error:  Call to undefined method FeedConfig::getOrdersProducts() in K:\wamp\www\zencart\feed\tracking_pixel\tp_checkout_success.php on line 32
+[01-Apr-2015 10:29:25 Europe/Paris] PHP Stack trace:
+[01-Apr-2015 10:29:25 Europe/Paris] PHP   1. {main}() K:\wamp\www\zencart\index.php:0
+[01-Apr-2015 10:29:25 Europe/Paris] PHP   2. require() K:\wamp\www\zencart\index.php:97
+[01-Apr-2015 10:29:25 Europe/Paris] PHP   3. require() K:\wamp\www\zencart\includes\templates\template_default\common\tpl_main_page.php:122
+[01-Apr-2015 10:29:25 Europe/Paris] PHP   4. require() K:\wamp\www\zencart\includes\templates\template_default\templates\tpl_checkout_success_default.php:18

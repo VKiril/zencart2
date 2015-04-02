@@ -1011,13 +1011,15 @@ if(isset($_POST['FEED_USER']) && isset($_POST['FEED_PASS']) && isset($_POST['FEE
         <td><input type="text" name="FEED_CLIENT_ID" style="margin-left: 2px; width: 130px;" value="<?php echo $feedifyConfig->getConfig('FEED_CLIENT_ID');?>"></td>
     </tr>
 
-    <tr>
+    <tr style="display: none">
         <td>• Products Id field</td>
         <td><select name="FEED_TRACKING_PRODUCTS_ID"  style="width: 130px; margin-left: 2px">
+                <option value="ModelOwn" selected >ModelOwn </option>
                 <?php
+                /*echo '<option value='.$key; if ($feedifyConfig->getConfig('FEED_TRACKING_PRODUCTS_ID') == $key) {echo " selected ";} echo '>'.$column.'</option>';
                 foreach($feedifyFields as $key=>$column) {
                     echo '<option value='.$key; if ($feedifyConfig->getConfig('FEED_TRACKING_PRODUCTS_ID') == $key) {echo " selected ";} echo '>'.$column.'</option>';
-                }
+                }*/
                 ?>
             </select>
         </td>
